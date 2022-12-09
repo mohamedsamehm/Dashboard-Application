@@ -1,0 +1,32 @@
+.categories-search
+    button.primary
+        .icon +
+        | Categories
+    button.secondary
+        .icon
+            img.svg(src="imgs/search.svg")
+        | Edit Categories
+    +dropdown('food', [
+        {name: 'health_food', value: 'Food (50 Tags)'}, 
+        {name: 'food_recipes', value: 'Food Recipes (50 Tags)'}, 
+        {name: 'fast_food', value: 'Fast Food (50 Tags)'}, 
+        {name: 'food_videos', value: 'Food Videos (50 Tags)'}, 
+    ])
+    +dropdown('academic', [
+        {name: 'academic', value: 'Academic (50 Tags)'}, 
+        {name: 'food_recipes1', value: 'Food Recipes (50 Tags)'}, 
+        {name: 'fast_food1', value: 'Fast Food (50 Tags)'}, 
+        {name: 'food_videos1', value: 'Food Videos (50 Tags)'}, 
+    ])
+    +dropdown('medicine', [
+        {name: 'medicine', value: 'Medicine (50 Tags)'}, 
+        {name: 'food_recipes2', value: 'Food Recipes (50 Tags)'}, 
+        {name: 'fast_food2', value: 'Fast Food (50 Tags)'}, 
+        {name: 'food_videos2', value: 'Food Videos (50 Tags)'}, 
+    ])
+    +dropdown('business', [
+        {name: 'business', value: 'Business (50 Tags)'}, 
+        {name: 'food_recipes3', value: 'Food Recipes (50 Tags)'}, 
+        {name: 'fast_food3', value: 'Fast Food (50 Tags)'}, 
+        {name: 'food_videos3', value: 'Food Videos (50 Tags)'}, 
+    ])

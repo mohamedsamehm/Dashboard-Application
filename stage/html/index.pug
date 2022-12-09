@@ -1,0 +1,234 @@
+- var pageTitle = 'Home';
+include pug/components/buttons
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    meta(name="color-scheme" content="dark light")
+    title #{pageTitle}
+    include pug/layout/styles
+  body
+    .page.home-page
+      include pug/layout/header
+      include pug/layout/sidebar
+      include pug/layout/monitor
+      .content-area
+        .row.no-gutters.content-area-container
+          .col.data-info
+            .info
+              .row.no-gutters
+                .col.inf-block
+                  span Topic 1 Monitor
+                  h2 Working
+                  p +500 COLLECTED IN LAST 7 DAYS
+                .col.inf-block
+                  span Total Posts
+                  h2 2580
+                  p +20 COLLECTED IN LAST 1 HOUR
+                .col.inf-block
+                  span Date Range
+                  h2 18/0/27 - 20/01/27
+                  p +500 COLLECTED IN LAST 7 DAYS
+            .tags
+              .row.no-gutters#cycleitems
+                .col.tags-block.scrollbar
+                  .trends
+                    h2 
+                      .icon 
+                        img(src="imgs/trends.svg", alt="", srcset="")
+                      .text Trends
+                    .thetags
+                      - for (var i = 0; i < 12; ++i)
+                        .tag + healthy
+                  .food
+                    h2 
+                      .icon
+                        img(src="imgs/food.svg", alt="", srcset="")
+                      .text Food
+                    .thetags
+                      - for (var i = 0; i < 12; ++i)
+                        .tag + healthy
+                .col.tags-block.scrollbar
+                  .trends
+                      h2 
+                        .icon 
+                          img(src="imgs/trends.svg", alt="", srcset="")
+                        .text Trends
+                      .thetags
+                        - for (var i = 0; i < 12; ++i)
+                          .tag + healthy
+                  .food
+                    h2
+                      .icon 
+                        img(src="imgs/food.svg", alt="", srcset="")
+                      .text Food
+                    .thetags
+                      - for (var i = 0; i < 12; ++i)
+                        .tag + healthy
+              .bar.d-block.d-lg-none
+                .handle
+                  .mousearea
+            .info-filters
+              .filter
+                ul.list-unstyled
+                  li(data-type="all")
+                    .icon
+                        i.fas.fa-border-all
+                    .text All
+                  li.active(data-type=".twitter")
+                    .icon
+                        i.fab.fa-twitter
+                    .text Twitter
+                  li(data-type=".global_news")
+                    .icon
+                        i.fas.fa-globe-asia
+                    .text Global News
+                  li(data-type=".canadian_news")
+                    .icon
+                        i.far.fa-newspaper
+                    .text Canadian News
+                +dropdown-icons([
+                    {name: 'All', value: 'fas fa-border-all', data: 'all'}, 
+                    {name: 'Twitter', value: 'fab fa-twitter', data: '.twitter'}, 
+                    {name: 'Global News', value: 'fas fa-globe-asia', data:'.global_news'}, 
+                    {name: 'Canadian News', value: 'far fa-newspaper', data:'.canadian_news'}, 
+                ])
+                .icon-full-screen
+                  i.fas.fa-expand
+              .thedata
+                .row.no-gutters
+                  - for (var i = 0; i < 15; i++)
+                    if (i % 3 == 0)
+                      .col.thedata-block.twitter
+                        .profile
+                          .img  
+                            img(src="imgs/profile.png")
+                          .name Jhon Deo
+                          .logo
+                            i.fab.fa-twitter
+                          .time 44 Min
+                        p.description Taking extra steps toward staying #[strong healthy] and feeling great with the new @nanocraftcbd
+                        .infs
+                          .message 
+                            i.far.fa-comment
+                            span 25
+                          .heart
+                            i.far.fa-heart
+                            span 10
+                    else if (i % 2 == 0)
+                      .col.thedata-block.global_news
+                        .profile
+                          .img  
+                            img(src="imgs/profile.png")
+                          .name Jhon Deo
+                          .logo
+                            i.fab.fa-twitter
+                          .time 44 Min
+                        p.description Taking extra steps toward staying #[strong healthy] and feeling great with the new @nanocraftcbd
+                        .infs
+                          .message 
+                            i.far.fa-comment
+                            span 25
+                          .heart
+                            i.far.fa-heart
+                            span 10
+                    else
+                      .col.thedata-block.canadian_news
+                        .profile
+                          .img  
+                            img(src="imgs/profile.png")
+                          .name Jhon Deo
+                          .logo
+                            i.fab.fa-twitter
+                          .time 44 Min
+                        p.description Taking extra steps toward staying #[strong healthy] and feeling great with the new @nanocraftcbd
+                        .infs
+                          .message 
+                            i.far.fa-comment
+                            span 25
+                          .heart
+                            i.far.fa-heart
+                            span 10
+          .col.canvas.mainCanvas
+            .row.no-gutters#canvasItems
+              .canvas-block.px.volume
+                .canvas-header
+                  .title
+                    h2 Total Volume
+                  .icon-full-screen
+                      i.fas.fa-expand
+                .block
+                  canvas#volume
+              .canvas-block.px.interactions
+                .canvas-header
+                  .title
+                    h2 Interactions
+                  .icon-full-screen
+                      i.fas.fa-expand
+                .block
+                  canvas#interactions
+              .canvas-block.sentiments
+                .canvas-header
+                  .title
+                    h2 Sentiments
+                  .icon-full-screen
+                      i.fas.fa-expand
+                .block
+                  canvas#myChart
+              .canvas-block.engagement
+                .canvas-header
+                  .title
+                    h2 Engagement
+                  .icon-full-screen
+                      i.fas.fa-expand
+                .svg-container.transform#engagement
+                  .svg
+                    svg(class="progress-ring" width="274" height="274")
+                      circle(
+                        class="progress-ring__circle"
+                        stroke="#F1F4FB"
+                        stroke-width="16"
+                        fill="transparent"
+                        r="127"
+                        cx="137"
+                        cy="137"
+                        stroke-dashoffset="199.571429"
+                        stroke-dasharray="798.285714")
+                      circle(
+                        class="progress-ring__circle"
+                        r="127"
+                        cx="137"
+                        cy="137" fill="transparent"
+                        stroke="#387DFD"
+                        stroke-width="16"
+                        stroke-dashoffset="399.142857"
+                        stroke-dasharray="798.285714")
+                    span 500 LIKES
+                  .svg
+                    svg(class="progress-ring-small" width="200" height="200")
+                      circle(
+                        class="progress-ring__circle"
+                        stroke="#F1F4FB"
+                        stroke-width="16"
+                        fill="transparent"
+                        r="90"
+                        cx="100"
+                        cy="100"
+                        stroke-dashoffset="141.428572"
+                        stroke-dasharray="565.714286")
+                      circle#bar(
+                        class="progress-ring__circle"
+                        r="90"
+                        cx="100"
+                        cy="100" fill="transparent"
+                        stroke="#00FFDB"
+                        stroke-width="16"
+                        stroke-dashoffset="198"
+                        stroke-dasharray="565.714286")
+                    span 365 COMMENTS
+            .bar
+              .handle
+                .mousearea
+    include pug/layout/scripts

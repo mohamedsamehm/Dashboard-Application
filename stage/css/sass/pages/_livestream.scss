@@ -1,0 +1,48 @@
+.livestream-page {
+  .content-area {
+    .data-info {
+      .info-filters {
+        .thedata {
+          @media (max-width: 768px) {
+            padding-top: 16px !important;
+            .dropdown {
+              display: block !important;
+              margin-bottom: 16px !important;
+              max-width: 175px !important;
+            }
+          }
+        }
+      }
+    }
+    .canvas {
+      background: var(--color-canvas);
+      border: 1px solid var(--color-page-background);
+      box-shadow: var(--main-BoxShadow);
+      border-radius: 3px;
+      padding: 16px;
+      .canvas-block {
+        box-shadow: none;
+        border-color: #d4dbed;
+        padding-bottom: 0;
+        &:last-child {
+          @media (min-width: 1400px) {
+            padding-bottom: 70px;
+            .canvas-header {
+              padding-bottom: 74px !important;
+            }
+          }
+        }
+        .canvas-header {
+          padding-bottom: 16px !important;
+        }
+        .progress-block {
+          &:last-child {
+            .cssProgress {
+              padding-bottom: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

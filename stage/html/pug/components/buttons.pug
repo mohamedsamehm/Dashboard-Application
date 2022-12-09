@@ -1,0 +1,71 @@
+//- dropdown without icon and with checkbox
+mixin dropdown(name, options)
+  .dropdown(data-control='checkbox-dropdown')
+    label.dropdown-label.ripple(data-ripple="#ffffff") Select Options
+    .dropdown-list
+      each option, index in options
+        .checkbox
+          if index==0
+            input(id=option.name type='checkbox', value=option.value name=name checked)
+            label.dropdown-option.selected(for=option.name) #{option.value}
+          else
+            input(id=option.name type='checkbox', value=option.value name=name)
+            label.dropdown-option(for=option.name) #{option.value}
+//- dropdown without icon or checkbox
+mixin dropdown-default(title, options)
+  .dropdown
+    label.dropdown-label.ripple(data-ripple="#ffffff") #{title}
+    .dropdown-list
+      each option, index in options
+        label.dropdown-option #{option.value}
+//- dropdown with one icon in label
+mixin dropdown-icon(src, title)
+    .dropdown.dropdown-icon
+      label.dropdown-label.ripple(data-ripple="#ffffff")
+        .icon
+          img(src=src)
+        span #{title}
+      .dropdown-list
+        label.dropdown-option 1
+        label.dropdown-option 2
+        label.dropdown-option 3
+        label.dropdown-option 4
+//- dropdown with icons in dropdown list
+mixin dropdown-icons(options)
+  .dropdown.dropdown-icon.filter-dropdown
+    each option, index in options
+      if index==1
+        label.dropdown-label.ripple(data-ripple="#ffffff")
+          .icon.twitter
+            i(class=option.value)
+          span #{option.name}
+    .dropdown-list
+      each option, index in options
+        if index==1
+          .option(data-type=option.data)
+            .icon.twitter
+              i(class=option.value)
+            label.dropdown-option.selected #{option.name}
+        else
+          .option(data-type=option.data)
+              .icon
+                i(class=option.value)
+              label.dropdown-option #{option.name}
+mixin data-picker(first,second)
+  - var name1 = "datetimepicker" + first;
+  - var name2 = "datetimepicker" + second;
+  .datapicker
+    span.datapicker-icon
+      i.fas.fa-calendar-week
+    .datepicker-container
+      .input-group.date(id=name1 data-target-input="nearest")
+        input.pr.datetimepicker-input(type="text" placeholder="Start Date" data-target="#"+name1 data-toggle="datetimepicker")
+      span.arrow-right
+      .input-group.date(id=name2 data-target-input="nearest")
+        input.pr.datetimepicker-input(type="text" placeholder="Final Date" data-target="#"+name2 data-toggle="datetimepicker")
+mixin search
+  form.search.input-group.form-inline.my-2.my-lg-0
+    input(type="text" placeholder="New Keyword")
+    .icon.input-group-append
+      span.input-group-text
+        i.fas.fa-search

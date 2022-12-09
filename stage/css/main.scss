@@ -1,0 +1,14 @@
+@use "sass:map";
+@import "sass/vars/var";
+@import "sass/layout/global";
+@import "sass/layout/header";
+@import "sass/layout/monitor";
+@import "sass/layout/sidebar";
+@import "sass/layout/search";
+@import "sass/componentes/buttons";
+@import "sass/componentes/blocks";
+@import "sass/pages/homepage";
+@import "sass/pages/livestream";
+@import "sass/pages/dashboard";
+@import "sass/pages/report";
+@import "sass/layout/darkmode";

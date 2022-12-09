@@ -1,0 +1,204 @@
+- var pageTitle = 'Dashboard Builder';
+- var current='Report';
+include pug/components/buttons
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    meta(name="color-scheme" content="dark light")
+    title #{pageTitle}
+    include pug/layout/styles
+  body
+    .page.report-page
+      include pug/layout/header
+      include pug/layout/sidebar
+      include pug/layout/monitor
+      .content-area
+        .content-area-container.row.no-gutters
+          .builder.col
+            h1 Report Builder
+            .inputs 
+              .select.input
+                label Select monitor
+                +dropdown-icon("imgs/monitor1.svg", "Topic 1")
+              .input
+                label Report Name
+                .dropdown-input-container
+                  input(type="text" placeholder="Report Name")
+              +data-picker(1, 2)
+            .dashboards
+              h2 Select Dashboards
+              .checkbox-container
+                .checkbox
+                    input#total_volume(type="checkbox")
+                    label(for="total_volume") Total Volume
+                .checkbox
+                    input#Words(type="checkbox")
+                    label(for="Words") Words
+                .checkbox
+                    input#total_volume1(type="checkbox" checked)
+                    label(for="total_volume1") Total Volume
+                .checkbox
+                    input#Interactions(type="checkbox" checked)
+                    label(for="Interactions") Interactions
+                .checkbox
+                    input#Tweets(type="checkbox")
+                    label(for="Tweets") Most Tweets
+                .checkbox
+                    input#Sentiments(type="checkbox")
+                    label(for="Sentiments") Sentiments
+            .checkboxToggle
+              input.customCheckbox(type="checkbox" id="shared_link")
+              label(for="shared_link")
+              span.labelclick Create Shared Link
+            .btns
+              button.mainBtn Generate
+              button.secondBtn Save Building
+          .canvas.col
+            .row.no-gutters.canvas-container#cycleitems
+                .canvas-block.px.volume.col-12
+                    .canvas-header
+                        .title
+                            h2 Total Volume
+                        .icon-full-screen
+                            i.fas.fa-expand
+                    .block
+                        canvas#volume
+                .canvas-block.col-6.px.interactions
+                    .canvas-header
+                        .title
+                            h2 Interactions
+                        .icon-full-screen
+                            i.fas.fa-expand
+                    .block
+                        canvas#interactions
+                .canvas-block.col-6.pb.sentiments
+                    .canvas-header
+                        .title
+                            h2 Sentiments
+                        .icon-full-screen
+                            i.fas.fa-expand
+                    .block
+                        canvas#myChart
+                .canvas-block.col-6
+                    .canvas-header
+                        .title
+                            h2 Words
+                    .progress-block
+                        .cssProgress
+                            .label cerb
+                            .theprogress
+                                span.label-progress 23.23%
+                                .cssProgress-bar.cssProgress-active(data-percent="92.5" style="width: 92.5%;")
+                    .progress-block
+                        .cssProgress
+                            .label canada
+                            .theprogress
+                                span.label-progress 8.12%
+                                .cssProgress-bar.cssProgress-active(data-percent="49.25" style="width: 49.25%;")
+                    .progress-block
+                        .cssProgress
+                            .label government
+                            .theprogress
+                                span.label-progress 8.10%
+                                .cssProgress-bar.cssProgress-active(data-percent="49.25" style="width: 49.25%;")
+                    .progress-block
+                        .cssProgress
+                            .label work
+                            .theprogress
+                                span.label-progress 6.05%
+                                .cssProgress-bar.cssProgress-active(data-percent="43" style="width: 43%;")
+                    .progress-block
+                        .cssProgress
+                            .label emergency
+                            .theprogress
+                                span.label-progress 4.85%
+                                .cssProgress-bar.cssProgress-active(data-percent="30.25" style="width: 30.25%;")
+                    .progress-block
+                        .cssProgress
+                            .label benefit
+                            .theprogress
+                                span.label-progress 4.05%
+                                .cssProgress-bar.cssProgress-active(data-percent="17.5" style="width: 17.5%;")
+                    .progress-block
+                        .cssProgress
+                            .label fraud
+                            .theprogress
+                                span.label-progress 3.50%
+                                .cssProgress-bar.cssProgress-active(data-percent="8" style="width: 8%;")
+                    .progress-block
+                        .cssProgress
+                            .label businesses
+                            .theprogress
+                                span.label-progress 2.15%
+                                .cssProgress-bar.cssProgress-active(data-percent="4" style="width: 4%;")
+                    .progress-block
+                        .cssProgress
+                            .label canadians
+                            .theprogress
+                                span.label-progress 1.65%
+                                .cssProgress-bar.cssProgress-active(data-percent="2" style="width: 2%;")
+                .canvas-block.col-6
+                    .canvas-header
+                        .title
+                            h2 Most Tweets
+                    .progress-block
+                        .cssProgress
+                            .label cerb
+                            .theprogress
+                                span.label-progress 23.23%
+                                .cssProgress-bar.cssProgress-active(data-percent="92.5" style="width: 92.5%;")
+                    .progress-block
+                        .cssProgress
+                            .label canada
+                            .theprogress
+                                span.label-progress 8.12%
+                                .cssProgress-bar.cssProgress-active(data-percent="49.25" style="width: 49.25%;")
+                    .progress-block
+                        .cssProgress
+                            .label government
+                            .theprogress
+                                span.label-progress 8.10%
+                                .cssProgress-bar.cssProgress-active(data-percent="49.25" style="width: 49.25%;")
+                    .progress-block
+                        .cssProgress
+                            .label work
+                            .theprogress
+                                span.label-progress 6.05%
+                                .cssProgress-bar.cssProgress-active(data-percent="43" style="width: 43%;")
+                    .progress-block
+                        .cssProgress
+                            .label emergency
+                            .theprogress
+                                span.label-progress 4.85%
+                                .cssProgress-bar.cssProgress-active(data-percent="30.25" style="width: 30.25%;")
+                    .progress-block
+                        .cssProgress
+                            .label benefit
+                            .theprogress
+                                span.label-progress 4.05%
+                                .cssProgress-bar.cssProgress-active(data-percent="17.5" style="width: 17.5%;")
+                    .progress-block
+                        .cssProgress
+                            .label fraud
+                            .theprogress
+                                span.label-progress 3.50%
+                                .cssProgress-bar.cssProgress-active(data-percent="8" style="width: 8%;")
+                    .progress-block
+                        .cssProgress
+                            .label businesses
+                            .theprogress
+                                span.label-progress 2.15%
+                                .cssProgress-bar.cssProgress-active(data-percent="4" style="width: 4%;")
+                    .progress-block
+                        .cssProgress
+                            .label canadians
+                            .theprogress
+                                span.label-progress 1.65%
+                                .cssProgress-bar.cssProgress-active(data-percent="2" style="width: 2%;")
+            .bar.d-block.d-lg-none
+                .handle
+                  .mousearea
+    include pug/layout/scripts

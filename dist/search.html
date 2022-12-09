@@ -1,0 +1,1967 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="color-scheme" content="dark light"/>
+    <title>Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="icon" href="imgs/favicon.ico" type="image/x-icon"/>
+  </head>
+  <body>
+    <div class="page magic-search-page">
+      <nav class="header navbar navbar-expand-lg navbar-light">
+        <div class="toggler"><img src="imgs/navToggle.svg" alt=""/></div>
+        <div class="logo"><a class="navbar-brand" href="/">
+            <div class="img"><img src="imgs/logo.png" alt="Ki Social"/></div>
+            <div class="logo-text">Ki Social</div></a></div>
+        <ul class="list-unstyled navbar-nav">
+          <li class="monitor nav-item"><a class="nav-link" href="#">
+              <div class="icon"><img class="svg" src="imgs/header1.svg"/></div>
+              <div class="text">Monitor</div></a></li>
+          <li class="nav-item"><a href="livestream">
+              <div class="icon"><img class="svg" src="imgs/header2.svg"/></div>
+              <div class="text">Live Stream</div></a></li>
+          <li class="nav-item"><a class="nav-link" href="#">
+              <div class="icon"><img class="svg" src="imgs/header3.svg"/></div>
+              <div class="text">Explore</div></a></li>
+          <li class="nav-item"><a class="nav-link" href="#">
+              <div class="icon"><img class="svg" src="imgs/header4.svg"/></div>
+              <div class="text">Global View</div></a></li>
+          <li class="nav-item"><a class="nav-link" href="#">
+              <div class="icon"><img class="svg" src="imgs/header5.svg"/></div>
+              <div class="text">Alerts</div></a></li>
+          <li class="nav-item"><a class="nav-link" href="#">
+              <div class="icon"><img class="svg" src="imgs/header6.svg"/></div>
+              <div class="text">Dashborads</div></a></li>
+        </ul>
+        <form class="search input-group form-inline my-2 my-lg-0">
+          <input type="text" placeholder="New Keyword"/>
+          <div class="icon input-group-append"><span class="input-group-text"><i class="fas fa-search"></i></span></div>
+        </form>
+        <div class="checkboxToggle">
+          <input class="customCheckbox" type="checkbox" id="checkboxToggle"/><span class="labelclick">Dark Mode</span>
+          <label for="checkboxToggle"></label>
+        </div>
+        <div class="settings-container"> 
+          <div class="notifications"><span class="icon"><i class="far fa-bell"></i></span><span class="numbers">2</span>
+            <div class="notifications-container">
+              <div class="notification scrollbar"><a href="#">
+                  <div class="icon"><i class="far fa-envelope"></i></div>
+                  <div class="notification-text">
+                    <h5>Commented on your post</h5><span>3 hours ago</span>
+                  </div></a><a href="#">
+                  <div class="icon"><i class="far fa-envelope"></i></div>
+                  <div class="notification-text">
+                    <h5>Commented on your post</h5><span>3 hours ago</span>
+                  </div></a><a href="#">
+                  <div class="icon"><i class="far fa-envelope"></i></div>
+                  <div class="notification-text">
+                    <h5>Commented on your post</h5><span>3 hours ago</span>
+                  </div></a><a href="#">
+                  <div class="icon"><i class="far fa-envelope"></i></div>
+                  <div class="notification-text">
+                    <h5>Commented on your post</h5><span>3 hours ago</span>
+                  </div></a><a href="#">
+                  <div class="icon"><i class="far fa-envelope"></i></div>
+                  <div class="notification-text">
+                    <h5>Commented on your post</h5><span>3 hours ago</span>
+                  </div></a><a href="#">
+                  <div class="icon"><i class="far fa-envelope"></i></div>
+                  <div class="notification-text">
+                    <h5>Commented on your post</h5><span>3 hours ago</span>
+                  </div></a><a href="#">
+                  <div class="icon"><i class="far fa-envelope"></i></div>
+                  <div class="notification-text">
+                    <h5>Commented on your post</h5><span>3 hours ago</span>
+                  </div></a></div>
+              <div class="divider"></div><a class="notification-btn" href="#">View all Notification</a>
+            </div>
+          </div>
+          <div class="profile"><img src="imgs/man.png" alt="" srcset=""/>
+            <div class="profile-container"><a href="#">
+                <div class="icon"><i class="far fa-user"></i></div>
+                <h5>Profile</h5></a><a href="#">
+                <div class="icon"><i class="far fa-envelope"></i></div>
+                <h5>Inbox</h5></a><a href="#">
+                <div class="icon"><i class="fas fa-sign-out-alt"></i></div>
+                <h5>Logout</h5></a></div>
+          </div>
+          <div class="settings"><i class="fas fa-chevron-down"></i></div>
+        </div>
+      </nav>
+      <div class="sidebar-container">
+        <div class="sidebar-overlay">
+          <div class="sidebar">
+            <div class="close-btn"></div>
+            <div class="logo"><a class="navbar-brand" href="/">
+                <div class="img"><img src="imgs/logo.png" alt="Ki Social"/></div>
+                <div class="logo-text">Ki Social</div></a></div>
+            <ul class="list-unstyled">
+              <li><a href="#">
+                  <div class="icon"> <img class="svg" src="imgs/sidebar1.svg" alt="who" srcset=""/></div>
+                  <div class="text">Who</div></a></li>
+              <li><a href="#">
+                  <div class="icon"> <img class="svg" src="imgs/sidebar2.svg" alt="What" srcset=""/></div>
+                  <div class="text">What</div></a></li>
+              <li><a href="#">
+                  <div class="icon"> <img class="svg" src="imgs/sidebar3.svg" alt="Where" srcset=""/></div>
+                  <div class="text">Where</div></a></li>
+              <li><a href="#">
+                  <div class="icon"> <img class="svg" src="imgs/sidebar4.svg" alt="How Much" srcset=""/></div>
+                  <div class="text">How Much</div></a></li>
+              <li><a href="#">
+                  <div class="icon"> <img class="svg" src="imgs/sidebar5.svg" alt="Why" srcset=""/></div>
+                  <div class="text">Why</div></a></li>
+              <li><a href="report">
+                  <div class="icon"> <img class="svg" src="imgs/sidebar6.svg" alt="Report" srcset=""/></div>
+                  <div class="text">Report</div></a></li>
+              <li><a class="active" href="search">
+                  <div class="icon"> <img class="svg" src="imgs/sidebar7.svg" alt="Search" srcset=""/></div>
+                  <div class="text">Search</div></a></li>
+              <li><a href="dashboard">
+                  <div class="icon"> <img class="svg" src="imgs/sidebar8.svg" alt="Add" srcset=""/></div>
+                  <div class="text">Add</div></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="monitor-container">
+        <div class="select">
+          <div class="label"> Select monitor</div>
+          <div class="dropdown dropdown-icon">
+            <label class="dropdown-label ripple" data-ripple="#ffffff">
+              <div class="icon"><img src="imgs/monitor1.svg"/></div><span>Topic 1</span>
+            </label>
+            <div class="dropdown-list">
+              <label class="dropdown-option">1</label>
+              <label class="dropdown-option">2</label>
+              <label class="dropdown-option">3</label>
+              <label class="dropdown-option">4</label>
+            </div>
+          </div>
+        </div>
+        <div class="blocks">
+          <div class="block">
+            <div class="label">Status</div>
+            <div class="inf">
+              <div class="icon"><img class="svg" src="imgs/monitor2.svg"/></div>
+              <div class="text">Working</div>
+            </div>
+          </div>
+          <div class="block">
+            <div class="label">Total Posts</div>
+            <div class="inf">
+              <div class="icon"><img class="svg" src="imgs/monitor3.svg"/></div>
+              <div class="text">2580</div>
+            </div>
+          </div>
+          <div class="block">
+            <div class="label">Date Range</div>
+            <div class="inf">
+              <div class="icon"><img class="svg" src="imgs/monitor4.svg"/></div>
+              <div class="text">2018/0/27 - 2020/01/27</div>
+            </div>
+          </div>
+        </div>
+        <div class="btns">
+          <button class="primary ripple" data-ripple="#387dfd">
+            <div class="icon"><img class="svg" src="imgs/monitor5.svg"/></div>View Monitor
+          </button>
+          <button class="secondary ripple" data-ripple="#387dfd">
+            <div class="icon"><img class="svg" src="imgs/monitor6.svg"/></div>Edit Monitor
+          </button>
+          <button class="secondary ripple" data-ripple="#387dfd">
+            <div class="icon"><img class="svg" src="imgs/monitor7.svg"/></div>Add Filter
+          </button>
+        </div>
+      </div>
+      <div class="content-area">
+        <div class="content-area-container">
+          <div class="magic-search">
+            <div class="btns no-scrollbar">
+              <button class="active" data-search=".magic-container">
+                <div class="icon"><img class="svg" src="imgs/magic1.svg"/></div>Magic
+              </button>
+              <button data-search=".simple-container">
+                <div class="icon"><img class="svg" src="imgs/magic2.svg"/></div>Simple
+              </button>
+              <button data-search=".advanced-container">
+                <div class="icon"><img class="svg" src="imgs/magic3.svg"/></div>Advanced
+              </button>
+              <button>
+                <div class="icon"><img class="svg" src="imgs/magic4.svg"/></div>News
+              </button>
+            </div>
+            <div class="search-tags input-group">
+              <div class="icon input-group-prepend">
+                <div class="input-group-text"><img class="svg" src="imgs/magic5.svg"/></div>
+              </div>
+              <input class="tagged" type="text" data-removeBtn="true" name="tag-2" value="healthy, healthy snacks, healthy recipes"/>
+              <div class="icon input-group-append"><span class="input-group-text"><i class="fas fa-search"></i></span></div>
+            </div>
+          </div>
+          <div class="magic-container search-container">
+            <div class="tags">
+              <div class="row no-gutters" id="cycleitems">
+                <div class="col tags-block scrollbar">
+                  <h2>
+                    <div class="text">Suggestions</div>
+                  </h2>
+                  <div class="thetags">
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                  </div>
+                </div>
+                <div class="col tags-block scrollbar">
+                  <h2> 
+                    <div class="text">Related</div>
+                  </h2>
+                  <div class="thetags">
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                  </div>
+                </div>
+                <div class="col tags-block scrollbar">
+                  <h2> 
+                    <div class="text">Translations</div>
+                  </h2>
+                  <div class="thetags">
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                    <div class="tag">+ healthy</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bar d-block d-lg-none">
+              <div class="handle">
+                <div class="mousearea"></div>
+              </div>
+            </div>
+            <div class="categories-search">
+              <button class="primary">
+                <div class="icon">+</div>Categories
+              </button>
+              <button class="secondary">
+                <div class="icon"><img class="svg" src="imgs/search.svg"/></div>Edit Categories
+              </button>
+              <div class="dropdown" data-control="checkbox-dropdown">
+                <label class="dropdown-label ripple" data-ripple="#ffffff">Select Options</label>
+                <div class="dropdown-list">
+                  <div class="checkbox">
+                    <input id="health_food" type="checkbox" value="Food (50 Tags)" name="food" checked="checked"/>
+                    <label class="dropdown-option selected" for="health_food">Food (50 Tags)</label>
+                  </div>
+                  <div class="checkbox">
+                    <input id="food_recipes" type="checkbox" value="Food Recipes (50 Tags)" name="food"/>
+                    <label class="dropdown-option" for="food_recipes">Food Recipes (50 Tags)</label>
+                  </div>
+                  <div class="checkbox">
+                    <input id="fast_food" type="checkbox" value="Fast Food (50 Tags)" name="food"/>
+                    <label class="dropdown-option" for="fast_food">Fast Food (50 Tags)</label>
+                  </div>
+                  <div class="checkbox">
+                    <input id="food_videos" type="checkbox" value="Food Videos (50 Tags)" name="food"/>
+                    <label class="dropdown-option" for="food_videos">Food Videos (50 Tags)</label>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown" data-control="checkbox-dropdown">
+                <label class="dropdown-label ripple" data-ripple="#ffffff">Select Options</label>
+                <div class="dropdown-list">
+                  <div class="checkbox">
+                    <input id="academic" type="checkbox" value="Academic (50 Tags)" name="academic" checked="checked"/>
+                    <label class="dropdown-option selected" for="academic">Academic (50 Tags)</label>
+                  </div>
+                  <div class="checkbox">
+                    <input id="food_recipes1" type="checkbox" value="Food Recipes (50 Tags)" name="academic"/>
+                    <label class="dropdown-option" for="food_recipes1">Food Recipes (50 Tags)</label>
+                  </div>
+                  <div class="checkbox">
+                    <input id="fast_food1" type="checkbox" value="Fast Food (50 Tags)" name="academic"/>
+                    <label class="dropdown-option" for="fast_food1">Fast Food (50 Tags)</label>
+                  </div>
+                  <div class="checkbox">
+                    <input id="food_videos1" type="checkbox" value="Food Videos (50 Tags)" name="academic"/>
+                    <label class="dropdown-option" for="food_videos1">Food Videos (50 Tags)</label>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown" data-control="checkbox-dropdown">
+                <label class="dropdown-label ripple" data-ripple="#ffffff">Select Options</label>
+                <div class="dropdown-list">
+                  <div class="checkbox">
+                    <input id="medicine" type="checkbox" value="Medicine (50 Tags)" name="medicine" checked="checked"/>
+                    <label class="dropdown-option selected" for="medicine">Medicine (50 Tags)</label>
+                  </div>
+                  <div class="checkbox">
+                    <input id="food_recipes2" type="checkbox" value="Food Recipes (50 Tags)" name="medicine"/>
+                    <label class="dropdown-option" for="food_recipes2">Food Recipes (50 Tags)</label>
+                  </div>
+                  <div class="checkbox">
+                    <input id="fast_food2" type="checkbox" value="Fast Food (50 Tags)" name="medicine"/>
+                    <label class="dropdown-option" for="fast_food2">Fast Food (50 Tags)</label>
+                  </div>
+                  <div class="checkbox">
+                    <input id="food_videos2" type="checkbox" value="Food Videos (50 Tags)" name="medicine"/>
+                    <label class="dropdown-option" for="food_videos2">Food Videos (50 Tags)</label>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown" data-control="checkbox-dropdown">
+                <label class="dropdown-label ripple" data-ripple="#ffffff">Select Options</label>
+                <div class="dropdown-list">
+                  <div class="checkbox">
+                    <input id="business" type="checkbox" value="Business (50 Tags)" name="business" checked="checked"/>
+                    <label class="dropdown-option selected" for="business">Business (50 Tags)</label>
+                  </div>
+                  <div class="checkbox">
+                    <input id="food_recipes3" type="checkbox" value="Food Recipes (50 Tags)" name="business"/>
+                    <label class="dropdown-option" for="food_recipes3">Food Recipes (50 Tags)</label>
+                  </div>
+                  <div class="checkbox">
+                    <input id="fast_food3" type="checkbox" value="Fast Food (50 Tags)" name="business"/>
+                    <label class="dropdown-option" for="fast_food3">Fast Food (50 Tags)</label>
+                  </div>
+                  <div class="checkbox">
+                    <input id="food_videos3" type="checkbox" value="Food Videos (50 Tags)" name="business"/>
+                    <label class="dropdown-option" for="food_videos3">Food Videos (50 Tags)</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="info-filters">
+              <div class="filter">
+                <ul class="list-unstyled">
+                  <li data-type="all">
+                    <div class="icon"><i class="fas fa-border-all"></i></div>
+                    <div class="text">All</div>
+                  </li>
+                  <li class="active" data-type=".twitter">
+                    <div class="icon"><i class="fab fa-twitter"></i></div>
+                    <div class="text">Twitter</div>
+                  </li>
+                  <li data-type=".global_news">
+                    <div class="icon"><i class="fas fa-globe-asia"></i></div>
+                    <div class="text">Global News</div>
+                  </li>
+                  <li data-type=".canadian_news">
+                    <div class="icon"><i class="far fa-newspaper"></i></div>
+                    <div class="text">Canadian News</div>
+                  </li>
+                </ul>
+                <div class="dropdown dropdown-icon filter-dropdown">
+                  <label class="dropdown-label ripple" data-ripple="#ffffff">
+                    <div class="icon twitter"><i class="fab fa-twitter"></i></div><span>Twitter</span>
+                  </label>
+                  <div class="dropdown-list">
+                    <div class="option" data-type="all">
+                      <div class="icon"><i class="fas fa-border-all"></i></div>
+                      <label class="dropdown-option">All</label>
+                    </div>
+                    <div class="option" data-type=".twitter">
+                      <div class="icon twitter"><i class="fab fa-twitter"></i></div>
+                      <label class="dropdown-option selected">Twitter</label>
+                    </div>
+                    <div class="option" data-type=".global_news">
+                      <div class="icon"><i class="fas fa-globe-asia"></i></div>
+                      <label class="dropdown-option">Global News</label>
+                    </div>
+                    <div class="option" data-type=".canadian_news">
+                      <div class="icon"><i class="far fa-newspaper"></i></div>
+                      <label class="dropdown-option">Canadian News</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown-container">
+                  <div class="dropdown dropdown-icon">
+                    <label class="dropdown-label ripple" data-ripple="#ffffff">
+                      <div class="icon"><img src="imgs/Vector.svg"/></div><span>Order By:</span>
+                    </label>
+                    <div class="dropdown-list">
+                      <label class="dropdown-option">1</label>
+                      <label class="dropdown-option">2</label>
+                      <label class="dropdown-option">3</label>
+                      <label class="dropdown-option">4</label>
+                    </div>
+                  </div>
+                  <div class="icons">
+                    <div class="icon active" data-class=""><img class="svg" src="imgs/livestream1.svg"/></div>
+                    <div class="icon" data-class="fullwidth"><img class="svg" src="imgs/livestream2.svg"/></div>
+                  </div>
+                </div>
+              </div>
+              <div class="thedata">
+                <div class="dropdown-container">
+                  <div class="dropdown dropdown-icon">
+                    <label class="dropdown-label ripple" data-ripple="#ffffff">
+                      <div class="icon"><img src="imgs/Vector.svg"/></div><span>Order By:</span>
+                    </label>
+                    <div class="dropdown-list">
+                      <label class="dropdown-option">1</label>
+                      <label class="dropdown-option">2</label>
+                      <label class="dropdown-option">3</label>
+                      <label class="dropdown-option">4</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col thedata-block twitter">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block canadian_news">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block global_news">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block twitter">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block global_news">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block canadian_news">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block twitter">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block canadian_news">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block global_news">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block twitter">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block global_news">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block canadian_news">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block twitter">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block canadian_news">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block global_news">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block twitter">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block global_news">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block canadian_news">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block twitter">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block canadian_news">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block global_news">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block twitter">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block global_news">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block canadian_news">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block twitter">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block canadian_news">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block global_news">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block twitter">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block global_news">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                  <div class="col thedata-block canadian_news">
+                    <div class="profile">
+                      <div class="img"> <img src="imgs/profile.png"/></div>
+                      <div class="name">Jhon Deo</div>
+                      <div class="logo"><i class="fab fa-twitter"></i></div>
+                      <div class="time">44 Min</div>
+                    </div>
+                    <p class="description">Taking extra steps toward staying <strong>healthy</strong> and feeling great with the new @nanocraftcbd</p>
+                    <div class="infs">
+                      <div class="message"> <i class="far fa-comment"></i><span>25</span></div>
+                      <div class="heart"><i class="far fa-heart"></i><span>10</span></div>
+                    </div>
+                    <div class="fulltime">2020-05-22 20:26:46</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="simple-container search-container row no-gutters">
+            <div class="row no-gutters">
+              <div class="content-sources col">
+                <div class="select-box">
+                  <h1>Content Sources</h1>
+                  <div class="dropdown-container">
+                    <label>Select Sources</label>
+                    <div class="dropdown" data-control="checkbox-dropdown">
+                      <label class="dropdown-label ripple" data-ripple="#ffffff">Select Options</label>
+                      <div class="dropdown-list"><a class="dropdown-option" href="#" data-toggle="check-all">All</a>
+                        <div class="checkbox">
+                          <input id="google_plus" type="checkbox" value="Google Plus" name="Google-Plus" checked="checked"/>
+                          <label class="dropdown-option selected" for="google_plus">Google Plus</label>
+                        </div>
+                        <div class="checkbox">
+                          <input id="reddit" type="checkbox" value="Reddit" name="redditd"/>
+                          <label class="dropdown-option" for="reddit">Reddit</label>
+                        </div>
+                        <div class="checkbox">
+                          <input id="twitter" type="checkbox" value="Twitter" name="twitter"/>
+                          <label class="dropdown-option" for="twitter">Twitter</label>
+                        </div>
+                        <div class="checkbox">
+                          <input id="blogs" type="checkbox" value="Blogs" name="Blogs"/>
+                          <label class="dropdown-option" for="blogs">Blogs</label>
+                        </div>
+                        <div class="checkbox">
+                          <input id="thumblr" type="checkbox" value="Thumblr" name="Thumblr"/>
+                          <label class="dropdown-option" for="thumblr">Thumblr</label>
+                        </div>
+                        <div class="checkbox">
+                          <input id="forums" type="checkbox" value="Forums" name="Forums"/>
+                          <label class="dropdown-option" for="forums">Forums</label>
+                        </div>
+                        <div class="checkbox">
+                          <input id="facebook" type="checkbox" value="Facebook Pages" name="facebook"/>
+                          <label class="dropdown-option" for="facebook">Facebook Pages</label>
+                        </div>
+                        <div class="checkbox">
+                          <input id="youtube" type="checkbox" value="Youtube" name="youtube"/>
+                          <label class="dropdown-option" for="youtube">Youtube</label>
+                        </div>
+                        <div class="checkbox">
+                          <input id="news" type="checkbox" value="News" name="news"/>
+                          <label class="dropdown-option" for="news">News                </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="words">
+                  <h2>Words</h2>
+                  <div class="input">
+                    <label>All These Words</label>
+                    <input type="text" value="Healthy, Dogs, Business"/>
+                  </div>
+                  <div class="input">
+                    <label>Any Of These Words</label>
+                    <input type="text" placeholder="Any Of These Words"/>
+                  </div>
+                  <div class="input">
+                    <label>None Of These Words</label>
+                    <input type="text" placeholder="None Of These Words"/>
+                  </div>
+                  <div class="input-checkbox">
+                    <div class="checkbox">
+                      <input id="disable_retweets" type="checkbox"/>
+                      <label for="disable_retweets">Disable Retweets</label>
+                    </div>
+                    <div class="checkbox">
+                      <input id="world_content" type="checkbox"/>
+                      <label for="world_content">Exclude other world content</label>
+                    </div>
+                  </div>
+                </div>
+                <button class="mainBtn">Save Query</button>
+              </div>
+              <div class="monitor col">
+                <div class="inputs">
+                  <div class="input">
+                    <label>Monitor Notes</label>
+                    <textarea name="monitor_notes" cols="30" rows="10"></textarea>
+                  </div>
+                  <div class="input">
+                    <label>Monitor Score</label>
+                    <textarea name="monitor_score" cols="30" rows="10"></textarea>
+                  </div>
+                </div>
+                <div class="filters">
+                  <h2>Filter Results</h2>
+                  <div class="filter-container">
+                    <div class="datapicker"><span class="datapicker-icon"><i class="fas fa-calendar-week"></i></span>
+                      <div class="datepicker-container">
+                        <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                          <input class="pr datetimepicker-input" type="text" placeholder="Start Date" data-target="#datetimepicker1" data-toggle="datetimepicker"/>
+                        </div><span class="arrow-right"></span>
+                        <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
+                          <input class="pr datetimepicker-input" type="text" placeholder="Final Date" data-target="#datetimepicker2" data-toggle="datetimepicker"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="checkbox">
+                      <input id="final_date_monitor" type="checkbox"/>
+                      <label for="final_date_monitor">No Final Date</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdowns">
+                  <div class="input">
+                    <label>Language (Optional)</label>
+                    <div class="dropdown-input-container">
+                      <div class="dropdown">
+                        <label class="dropdown-label ripple" data-ripple="#ffffff">Limit To</label>
+                        <div class="dropdown-list">
+                          <label class="dropdown-option">1</label>
+                          <label class="dropdown-option">2</label>
+                          <label class="dropdown-option">3</label>
+                        </div>
+                      </div>
+                      <select data-placeholder="Search Languages">
+                        <option value="AF">Afrikaans</option>
+                        <option value="SQ">Albanian</option>
+                        <option value="AR">Arabic</option>
+                        <option value="HY">Armenian</option>
+                        <option value="EU">Basque</option>
+                        <option value="BN">Bengali</option>
+                        <option value="BG">Bulgarian</option>
+                        <option value="CA">Catalan</option>
+                        <option value="KM">Cambodian</option>
+                        <option value="ZH">Chinese (Mandarin)</option>
+                        <option value="HR">Croatian</option>
+                        <option value="CS">Czech</option>
+                        <option value="DA">Danish</option>
+                        <option value="NL">Dutch</option>
+                        <option value="EN">English</option>
+                        <option value="ET">Estonian</option>
+                        <option value="FJ">Fiji</option>
+                        <option value="FI">Finnish</option>
+                        <option value="FR">French</option>
+                        <option value="KA">Georgian</option>
+                        <option value="DE">German</option>
+                        <option value="EL">Greek</option>
+                        <option value="GU">Gujarati</option>
+                        <option value="HE">Hebrew</option>
+                        <option value="HI">Hindi</option>
+                        <option value="HU">Hungarian</option>
+                        <option value="IS">Icelandic</option>
+                        <option value="ID">Indonesian</option>
+                        <option value="GA">Irish</option>
+                        <option value="IT">Italian</option>
+                        <option value="JA">Japanese</option>
+                        <option value="JW">Javanese</option>
+                        <option value="KO">Korean</option>
+                        <option value="LA">Latin</option>
+                        <option value="LV">Latvian</option>
+                        <option value="LT">Lithuanian</option>
+                        <option value="MK">Macedonian</option>
+                        <option value="MS">Malay</option>
+                        <option value="ML">Malayalam</option>
+                        <option value="MT">Maltese</option>
+                        <option value="MI">Maori</option>
+                        <option value="MR">Marathi</option>
+                        <option value="MN">Mongolian</option>
+                        <option value="NE">Nepali</option>
+                        <option value="NO">Norwegian</option>
+                        <option value="FA">Persian</option>
+                        <option value="PL">Polish</option>
+                        <option value="PT">Portuguese</option>
+                        <option value="PA">Punjabi</option>
+                        <option value="QU">Quechua</option>
+                        <option value="RO">Romanian</option>
+                        <option value="RU">Russian</option>
+                        <option value="SM">Samoan</option>
+                        <option value="SR">Serbian</option>
+                        <option value="SK">Slovak</option>
+                        <option value="SL">Slovenian</option>
+                        <option value="ES">Spanish</option>
+                        <option value="SW">Swahili</option>
+                        <option value="SV">Swedish </option>
+                        <option value="TA">Tamil</option>
+                        <option value="TT">Tatar</option>
+                        <option value="TE">Telugu</option>
+                        <option value="TH">Thai</option>
+                        <option value="BO">Tibetan</option>
+                        <option value="TO">Tonga</option>
+                        <option value="TR">Turkish</option>
+                        <option value="UK">Ukrainian</option>
+                        <option value="UR">Urdu</option>
+                        <option value="UZ">Uzbek</option>
+                        <option value="VI">Vietnamese</option>
+                        <option value="CY">Welsh</option>
+                        <option value="XH">Xhosa</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="input">
+                    <label>Country (Optional)</label>
+                    <div class="dropdown-input-container">
+                      <div class="dropdown">
+                        <label class="dropdown-label ripple" data-ripple="#ffffff">Limit To</label>
+                        <div class="dropdown-list">
+                          <label class="dropdown-option">1</label>
+                          <label class="dropdown-option">2</label>
+                          <label class="dropdown-option">3</label>
+                        </div>
+                      </div>
+                      <select placeholder="Search Country">
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Åland Islands">&angst;land Islands</option>
+                        <option value="Albania">Albania</option>
+                        <option value="Algeria">Algeria</option>
+                        <option value="American Samoa">American Samoa</option>
+                        <option value="Andorra">Andorra</option>
+                        <option value="Angola">Angola</option>
+                        <option value="Anguilla">Anguilla</option>
+                        <option value="Antarctica">Antarctica</option>
+                        <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Armenia">Armenia</option>
+                        <option value="Aruba">Aruba</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Azerbaijan">Azerbaijan</option>
+                        <option value="Bahamas">Bahamas</option>
+                        <option value="Bahrain">Bahrain</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="Barbados">Barbados</option>
+                        <option value="Belarus">Belarus</option>
+                        <option value="Belgium">Belgium</option>
+                        <option value="Belize">Belize</option>
+                        <option value="Benin">Benin</option>
+                        <option value="Bermuda">Bermuda</option>
+                        <option value="Bhutan">Bhutan</option>
+                        <option value="Bolivia">Bolivia</option>
+                        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                        <option value="Botswana">Botswana</option>
+                        <option value="Bouvet Island">Bouvet Island</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                        <option value="Brunei Darussalam">Brunei Darussalam</option>
+                        <option value="Bulgaria">Bulgaria</option>
+                        <option value="Burkina Faso">Burkina Faso</option>
+                        <option value="Burundi">Burundi</option>
+                        <option value="Cambodia">Cambodia</option>
+                        <option value="Cameroon">Cameroon</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Cape Verde">Cape Verde</option>
+                        <option value="Cayman Islands">Cayman Islands</option>
+                        <option value="Central African Republic">Central African Republic</option>
+                        <option value="Chad">Chad</option>
+                        <option value="Chile">Chile</option>
+                        <option value="China">China</option>
+                        <option value="Christmas Island">Christmas Island</option>
+                        <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Comoros">Comoros</option>
+                        <option value="Congo">Congo</option>
+                        <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+                        <option value="Cook Islands">Cook Islands</option>
+                        <option value="Costa Rica">Costa Rica</option>
+                        <option value="Cote D'ivoire">Cote D&apos;ivoire</option>
+                        <option value="Croatia">Croatia</option>
+                        <option value="Cuba">Cuba</option>
+                        <option value="Cyprus">Cyprus</option>
+                        <option value="Czech Republic">Czech Republic</option>
+                        <option value="Denmark">Denmark</option>
+                        <option value="Djibouti">Djibouti</option>
+                        <option value="Dominica">Dominica</option>
+                        <option value="Dominican Republic">Dominican Republic</option>
+                        <option value="Ecuador">Ecuador</option>
+                        <option value="Egypt">Egypt</option>
+                        <option value="El Salvador">El Salvador</option>
+                        <option value="Equatorial Guinea">Equatorial Guinea</option>
+                        <option value="Eritrea">Eritrea</option>
+                        <option value="Estonia">Estonia</option>
+                        <option value="Ethiopia">Ethiopia</option>
+                        <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                        <option value="Faroe Islands">Faroe Islands</option>
+                        <option value="Fiji">Fiji</option>
+                        <option value="Finland">Finland</option>
+                        <option value="France">France</option>
+                        <option value="French Guiana">French Guiana</option>
+                        <option value="French Polynesia">French Polynesia</option>
+                        <option value="French Southern Territories">French Southern Territories</option>
+                        <option value="Gabon">Gabon</option>
+                        <option value="Gambia">Gambia</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Ghana">Ghana</option>
+                        <option value="Gibraltar">Gibraltar</option>
+                        <option value="Greece">Greece</option>
+                        <option value="Greenland">Greenland</option>
+                        <option value="Grenada">Grenada</option>
+                        <option value="Guadeloupe">Guadeloupe</option>
+                        <option value="Guam">Guam</option>
+                        <option value="Guatemala">Guatemala</option>
+                        <option value="Guernsey">Guernsey</option>
+                        <option value="Guinea">Guinea</option>
+                        <option value="Guinea-bissau">Guinea-bissau</option>
+                        <option value="Guyana">Guyana</option>
+                        <option value="Haiti">Haiti</option>
+                        <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+                        <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+                        <option value="Honduras">Honduras</option>
+                        <option value="Hong Kong">Hong Kong</option>
+                        <option value="Hungary">Hungary</option>
+                        <option value="Iceland">Iceland</option>
+                        <option value="India">India</option>
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+                        <option value="Iraq">Iraq</option>
+                        <option value="Ireland">Ireland</option>
+                        <option value="Isle of Man">Isle of Man</option>
+                        <option value="Israel">Israel</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Jamaica">Jamaica</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Jersey">Jersey</option>
+                        <option value="Jordan">Jordan</option>
+                        <option value="Kazakhstan">Kazakhstan</option>
+                        <option value="Kenya">Kenya</option>
+                        <option value="Kiribati">Kiribati</option>
+                        <option value="Korea, Democratic People's Republic of">Korea, Democratic People&apos;s Republic of</option>
+                        <option value="Korea, Republic of">Korea, Republic of</option>
+                        <option value="Kuwait">Kuwait</option>
+                        <option value="Kyrgyzstan">Kyrgyzstan</option>
+                        <option value="Lao People's Democratic Republic">Lao People&apos;s Democratic Republic</option>
+                        <option value="Latvia">Latvia</option>
+                        <option value="Lebanon">Lebanon</option>
+                        <option value="Lesotho">Lesotho</option>
+                        <option value="Liberia">Liberia</option>
+                        <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                        <option value="Liechtenstein">Liechtenstein</option>
+                        <option value="Lithuania">Lithuania</option>
+                        <option value="Luxembourg">Luxembourg</option>
+                        <option value="Macao">Macao</option>
+                        <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
+                        <option value="Madagascar">Madagascar</option>
+                        <option value="Malawi">Malawi</option>
+                        <option value="Malaysia">Malaysia</option>
+                        <option value="Maldives">Maldives</option>
+                        <option value="Mali">Mali</option>
+                        <option value="Malta">Malta</option>
+                        <option value="Marshall Islands">Marshall Islands</option>
+                        <option value="Martinique">Martinique</option>
+                        <option value="Mauritania">Mauritania</option>
+                        <option value="Mauritius">Mauritius</option>
+                        <option value="Mayotte">Mayotte</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+                        <option value="Moldova, Republic of">Moldova, Republic of</option>
+                        <option value="Monaco">Monaco</option>
+                        <option value="Mongolia">Mongolia</option>
+                        <option value="Montenegro">Montenegro</option>
+                        <option value="Montserrat">Montserrat</option>
+                        <option value="Morocco">Morocco</option>
+                        <option value="Mozambique">Mozambique</option>
+                        <option value="Myanmar">Myanmar</option>
+                        <option value="Namibia">Namibia</option>
+                        <option value="Nauru">Nauru</option>
+                        <option value="Nepal">Nepal</option>
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="Netherlands Antilles">Netherlands Antilles</option>
+                        <option value="New Caledonia">New Caledonia</option>
+                        <option value="New Zealand">New Zealand</option>
+                        <option value="Nicaragua">Nicaragua</option>
+                        <option value="Niger">Niger</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Niue">Niue</option>
+                        <option value="Norfolk Island">Norfolk Island</option>
+                        <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                        <option value="Norway">Norway</option>
+                        <option value="Oman">Oman</option>
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="Palau">Palau</option>
+                        <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+                        <option value="Panama">Panama</option>
+                        <option value="Papua New Guinea">Papua New Guinea</option>
+                        <option value="Paraguay">Paraguay</option>
+                        <option value="Peru">Peru</option>
+                        <option value="Philippines">Philippines</option>
+                        <option value="Pitcairn">Pitcairn</option>
+                        <option value="Poland">Poland</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Puerto Rico">Puerto Rico</option>
+                        <option value="Qatar">Qatar</option>
+                        <option value="Reunion">Reunion</option>
+                        <option value="Romania">Romania</option>
+                        <option value="Russian Federation">Russian Federation</option>
+                        <option value="Rwanda">Rwanda</option>
+                        <option value="Saint Helena">Saint Helena</option>
+                        <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                        <option value="Saint Lucia">Saint Lucia</option>
+                        <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                        <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+                        <option value="Samoa">Samoa</option>
+                        <option value="San Marino">San Marino</option>
+                        <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                        <option value="Saudi Arabia">Saudi Arabia</option>
+                        <option value="Senegal">Senegal</option>
+                        <option value="Serbia">Serbia</option>
+                        <option value="Seychelles">Seychelles</option>
+                        <option value="Sierra Leone">Sierra Leone</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="Slovakia">Slovakia</option>
+                        <option value="Slovenia">Slovenia</option>
+                        <option value="Solomon Islands">Solomon Islands</option>
+                        <option value="Somalia">Somalia</option>
+                        <option value="South Africa">South Africa</option>
+                        <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+                        <option value="Spain">Spain</option>
+                        <option value="Sri Lanka">Sri Lanka</option>
+                        <option value="Sudan">Sudan</option>
+                        <option value="Suriname">Suriname</option>
+                        <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                        <option value="Swaziland">Swaziland</option>
+                        <option value="Sweden">Sweden</option>
+                        <option value="Switzerland">Switzerland</option>
+                        <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                        <option value="Taiwan, Province of China">Taiwan, Province of China</option>
+                        <option value="Tajikistan">Tajikistan</option>
+                        <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+                        <option value="Thailand">Thailand</option>
+                        <option value="Timor-leste">Timor-leste</option>
+                        <option value="Togo">Togo</option>
+                        <option value="Tokelau">Tokelau</option>
+                        <option value="Tonga">Tonga</option>
+                        <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                        <option value="Tunisia">Tunisia</option>
+                        <option value="Turkey">Turkey</option>
+                        <option value="Turkmenistan">Turkmenistan</option>
+                        <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                        <option value="Tuvalu">Tuvalu</option>
+                        <option value="Uganda">Uganda</option>
+                        <option value="Ukraine">Ukraine</option>
+                        <option value="United Arab Emirates">United Arab Emirates</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="United States">United States</option>
+                        <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                        <option value="Uruguay">Uruguay</option>
+                        <option value="Uzbekistan">Uzbekistan</option>
+                        <option value="Vanuatu">Vanuatu</option>
+                        <option value="Venezuela">Venezuela</option>
+                        <option value="Viet Nam">Viet Nam</option>
+                        <option value="Virgin Islands, British">Virgin Islands, British</option>
+                        <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+                        <option value="Wallis and Futuna">Wallis and Futuna</option>
+                        <option value="Western Sahara">Western Sahara</option>
+                        <option value="Yemen">Yemen</option>
+                        <option value="Zambia">Zambia</option>
+                        <option value="Zimbabwe">Zimbabwe</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="input">
+                    <label>Gender (Optional)</label>
+                    <div class="dropdown-input-container">
+                      <div class="dropdown">
+                        <label class="dropdown-label ripple" data-ripple="#ffffff">Select Gender</label>
+                        <div class="dropdown-list">
+                          <label class="dropdown-option">Male</label>
+                          <label class="dropdown-option">Female</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="btns">
+                  <button class="mainBtn">Search</button>
+                  <button class="secondBtn">Run For Today</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="advanced-container search-container">
+            <div class="row no-gutters">
+              <div class="content-sources col">
+                <div class="select-box">
+                  <h1>Content Sources</h1>
+                  <div class="dropdown-container">
+                    <label>Select Sources</label>
+                    <div class="dropdown" data-control="checkbox-dropdown">
+                      <label class="dropdown-label ripple" data-ripple="#ffffff">Select Options</label>
+                      <div class="dropdown-list"><a class="dropdown-option" href="#" data-toggle="check-all">All</a>
+                        <div class="checkbox">
+                          <input id="google_plus1" type="checkbox" value="Google Plus" name="Google-Plus" checked="checked"/>
+                          <label class="dropdown-option selected" for="google_plus1">Google Plus</label>
+                        </div>
+                        <div class="checkbox">
+                          <input id="reddit1" type="checkbox" value="Reddit" name="redditd"/>
+                          <label class="dropdown-option" for="reddit1">Reddit</label>
+                        </div>
+                        <div class="checkbox">
+                          <input id="twitter1" type="checkbox" value="Twitter" name="twitter"/>
+                          <label class="dropdown-option" for="twitter1">Twitter</label>
+                        </div>
+                        <div class="checkbox">
+                          <input id="blogs1" type="checkbox" value="Blogs" name="Blogs"/>
+                          <label class="dropdown-option" for="blogs1">Blogs</label>
+                        </div>
+                        <div class="checkbox">
+                          <input id="thumblr1" type="checkbox" value="Thumblr" name="Thumblr"/>
+                          <label class="dropdown-option" for="thumblr1">Thumblr</label>
+                        </div>
+                        <div class="checkbox">
+                          <input id="forums1" type="checkbox" value="Forums" name="Forums"/>
+                          <label class="dropdown-option" for="forums1">Forums</label>
+                        </div>
+                        <div class="checkbox">
+                          <input id="facebook1" type="checkbox" value="Facebook Pages" name="facebook"/>
+                          <label class="dropdown-option" for="facebook1">Facebook Pages</label>
+                        </div>
+                        <div class="checkbox">
+                          <input id="youtube1" type="checkbox" value="Youtube" name="youtube"/>
+                          <label class="dropdown-option" for="youtube1">Youtube</label>
+                        </div>
+                        <div class="checkbox">
+                          <input id="news1" type="checkbox" value="News" name="news"/>
+                          <label class="dropdown-option" for="news1">News                </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="role-group">
+                  <div class="btns">
+                    <button class="green default">Add Rule</button>
+                    <button class="green default">Add Group</button>
+                    <div class="btn-cont">
+                      <button class="blue">And</button><span>Or</span>
+                    </div>
+                  </div>
+                  <div class="role">
+                    <div class="input">
+                      <label>Select Rule</label>
+                      <div class="delete"> <i class="far fa-trash-alt"></i></div>
+                      <div class="dropdown-input-container">
+                        <div class="dropdown">
+                          <label class="dropdown-label ripple" data-ripple="#ffffff">Keyword</label>
+                          <div class="dropdown-list">
+                            <label class="dropdown-option">1</label>
+                            <label class="dropdown-option">2</label>
+                            <label class="dropdown-option">3</label>
+                          </div>
+                        </div>
+                        <input type="text" placeholder="Type Keyword"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="role">
+                    <div class="input">
+                      <label>Select Rule</label>
+                      <div class="delete"> <i class="far fa-trash-alt"></i></div>
+                      <div class="dropdown-input-container">
+                        <div class="dropdown">
+                          <label class="dropdown-label ripple" data-ripple="#ffffff">Keyword</label>
+                          <div class="dropdown-list">
+                            <label class="dropdown-option">1</label>
+                            <label class="dropdown-option">2</label>
+                            <label class="dropdown-option">3</label>
+                          </div>
+                        </div>
+                        <input type="text" placeholder="Type Keyword"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="btns">
+                  <button class="mainBtn">Generate</button>
+                  <button class="orange default">Reset</button>
+                </div>
+              </div>
+              <div class="monitor col">
+                <div class="inputs">
+                  <div class="input">
+                    <label>Monitor Notes</label>
+                    <textarea name="monitor_notes" cols="30" rows="10"></textarea>
+                  </div>
+                  <div class="input">
+                    <label>Monitor Score</label>
+                    <textarea name="monitor_score" cols="30" rows="10"></textarea>
+                  </div>
+                </div>
+                <div class="filters">
+                  <h2>Filter Results</h2>
+                  <div class="filter-container">
+                    <div class="datapicker"><span class="datapicker-icon"><i class="fas fa-calendar-week"></i></span>
+                      <div class="datepicker-container">
+                        <div class="input-group date" id="datetimepicker3" data-target-input="nearest">
+                          <input class="pr datetimepicker-input" type="text" placeholder="Start Date" data-target="#datetimepicker3" data-toggle="datetimepicker"/>
+                        </div><span class="arrow-right"></span>
+                        <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
+                          <input class="pr datetimepicker-input" type="text" placeholder="Final Date" data-target="#datetimepicker4" data-toggle="datetimepicker"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="checkbox">
+                      <input id="final_date_advanced" type="checkbox"/>
+                      <label for="final_date_advanced">No Final Date</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdowns">
+                  <div class="input">
+                    <label>Language (Optional)</label>
+                    <div class="dropdown-input-container">
+                      <div class="dropdown">
+                        <label class="dropdown-label ripple" data-ripple="#ffffff">Limit To</label>
+                        <div class="dropdown-list">
+                          <label class="dropdown-option">1</label>
+                          <label class="dropdown-option">2</label>
+                          <label class="dropdown-option">3</label>
+                        </div>
+                      </div>
+                      <select data-placeholder="Search Languages">
+                        <option value="AF">Afrikaans</option>
+                        <option value="SQ">Albanian</option>
+                        <option value="AR">Arabic</option>
+                        <option value="HY">Armenian</option>
+                        <option value="EU">Basque</option>
+                        <option value="BN">Bengali</option>
+                        <option value="BG">Bulgarian</option>
+                        <option value="CA">Catalan</option>
+                        <option value="KM">Cambodian</option>
+                        <option value="ZH">Chinese (Mandarin)</option>
+                        <option value="HR">Croatian</option>
+                        <option value="CS">Czech</option>
+                        <option value="DA">Danish</option>
+                        <option value="NL">Dutch</option>
+                        <option value="EN">English</option>
+                        <option value="ET">Estonian</option>
+                        <option value="FJ">Fiji</option>
+                        <option value="FI">Finnish</option>
+                        <option value="FR">French</option>
+                        <option value="KA">Georgian</option>
+                        <option value="DE">German</option>
+                        <option value="EL">Greek</option>
+                        <option value="GU">Gujarati</option>
+                        <option value="HE">Hebrew</option>
+                        <option value="HI">Hindi</option>
+                        <option value="HU">Hungarian</option>
+                        <option value="IS">Icelandic</option>
+                        <option value="ID">Indonesian</option>
+                        <option value="GA">Irish</option>
+                        <option value="IT">Italian</option>
+                        <option value="JA">Japanese</option>
+                        <option value="JW">Javanese</option>
+                        <option value="KO">Korean</option>
+                        <option value="LA">Latin</option>
+                        <option value="LV">Latvian</option>
+                        <option value="LT">Lithuanian</option>
+                        <option value="MK">Macedonian</option>
+                        <option value="MS">Malay</option>
+                        <option value="ML">Malayalam</option>
+                        <option value="MT">Maltese</option>
+                        <option value="MI">Maori</option>
+                        <option value="MR">Marathi</option>
+                        <option value="MN">Mongolian</option>
+                        <option value="NE">Nepali</option>
+                        <option value="NO">Norwegian</option>
+                        <option value="FA">Persian</option>
+                        <option value="PL">Polish</option>
+                        <option value="PT">Portuguese</option>
+                        <option value="PA">Punjabi</option>
+                        <option value="QU">Quechua</option>
+                        <option value="RO">Romanian</option>
+                        <option value="RU">Russian</option>
+                        <option value="SM">Samoan</option>
+                        <option value="SR">Serbian</option>
+                        <option value="SK">Slovak</option>
+                        <option value="SL">Slovenian</option>
+                        <option value="ES">Spanish</option>
+                        <option value="SW">Swahili</option>
+                        <option value="SV">Swedish </option>
+                        <option value="TA">Tamil</option>
+                        <option value="TT">Tatar</option>
+                        <option value="TE">Telugu</option>
+                        <option value="TH">Thai</option>
+                        <option value="BO">Tibetan</option>
+                        <option value="TO">Tonga</option>
+                        <option value="TR">Turkish</option>
+                        <option value="UK">Ukrainian</option>
+                        <option value="UR">Urdu</option>
+                        <option value="UZ">Uzbek</option>
+                        <option value="VI">Vietnamese</option>
+                        <option value="CY">Welsh</option>
+                        <option value="XH">Xhosa</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="input">
+                    <label>Country (Optional)</label>
+                    <div class="dropdown-input-container">
+                      <div class="dropdown">
+                        <label class="dropdown-label ripple" data-ripple="#ffffff">Limit To</label>
+                        <div class="dropdown-list">
+                          <label class="dropdown-option">1</label>
+                          <label class="dropdown-option">2</label>
+                          <label class="dropdown-option">3</label>
+                        </div>
+                      </div>
+                      <select placeholder="Search Country">
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Åland Islands">&angst;land Islands</option>
+                        <option value="Albania">Albania</option>
+                        <option value="Algeria">Algeria</option>
+                        <option value="American Samoa">American Samoa</option>
+                        <option value="Andorra">Andorra</option>
+                        <option value="Angola">Angola</option>
+                        <option value="Anguilla">Anguilla</option>
+                        <option value="Antarctica">Antarctica</option>
+                        <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Armenia">Armenia</option>
+                        <option value="Aruba">Aruba</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Azerbaijan">Azerbaijan</option>
+                        <option value="Bahamas">Bahamas</option>
+                        <option value="Bahrain">Bahrain</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="Barbados">Barbados</option>
+                        <option value="Belarus">Belarus</option>
+                        <option value="Belgium">Belgium</option>
+                        <option value="Belize">Belize</option>
+                        <option value="Benin">Benin</option>
+                        <option value="Bermuda">Bermuda</option>
+                        <option value="Bhutan">Bhutan</option>
+                        <option value="Bolivia">Bolivia</option>
+                        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                        <option value="Botswana">Botswana</option>
+                        <option value="Bouvet Island">Bouvet Island</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                        <option value="Brunei Darussalam">Brunei Darussalam</option>
+                        <option value="Bulgaria">Bulgaria</option>
+                        <option value="Burkina Faso">Burkina Faso</option>
+                        <option value="Burundi">Burundi</option>
+                        <option value="Cambodia">Cambodia</option>
+                        <option value="Cameroon">Cameroon</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Cape Verde">Cape Verde</option>
+                        <option value="Cayman Islands">Cayman Islands</option>
+                        <option value="Central African Republic">Central African Republic</option>
+                        <option value="Chad">Chad</option>
+                        <option value="Chile">Chile</option>
+                        <option value="China">China</option>
+                        <option value="Christmas Island">Christmas Island</option>
+                        <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Comoros">Comoros</option>
+                        <option value="Congo">Congo</option>
+                        <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+                        <option value="Cook Islands">Cook Islands</option>
+                        <option value="Costa Rica">Costa Rica</option>
+                        <option value="Cote D'ivoire">Cote D&apos;ivoire</option>
+                        <option value="Croatia">Croatia</option>
+                        <option value="Cuba">Cuba</option>
+                        <option value="Cyprus">Cyprus</option>
+                        <option value="Czech Republic">Czech Republic</option>
+                        <option value="Denmark">Denmark</option>
+                        <option value="Djibouti">Djibouti</option>
+                        <option value="Dominica">Dominica</option>
+                        <option value="Dominican Republic">Dominican Republic</option>
+                        <option value="Ecuador">Ecuador</option>
+                        <option value="Egypt">Egypt</option>
+                        <option value="El Salvador">El Salvador</option>
+                        <option value="Equatorial Guinea">Equatorial Guinea</option>
+                        <option value="Eritrea">Eritrea</option>
+                        <option value="Estonia">Estonia</option>
+                        <option value="Ethiopia">Ethiopia</option>
+                        <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                        <option value="Faroe Islands">Faroe Islands</option>
+                        <option value="Fiji">Fiji</option>
+                        <option value="Finland">Finland</option>
+                        <option value="France">France</option>
+                        <option value="French Guiana">French Guiana</option>
+                        <option value="French Polynesia">French Polynesia</option>
+                        <option value="French Southern Territories">French Southern Territories</option>
+                        <option value="Gabon">Gabon</option>
+                        <option value="Gambia">Gambia</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Ghana">Ghana</option>
+                        <option value="Gibraltar">Gibraltar</option>
+                        <option value="Greece">Greece</option>
+                        <option value="Greenland">Greenland</option>
+                        <option value="Grenada">Grenada</option>
+                        <option value="Guadeloupe">Guadeloupe</option>
+                        <option value="Guam">Guam</option>
+                        <option value="Guatemala">Guatemala</option>
+                        <option value="Guernsey">Guernsey</option>
+                        <option value="Guinea">Guinea</option>
+                        <option value="Guinea-bissau">Guinea-bissau</option>
+                        <option value="Guyana">Guyana</option>
+                        <option value="Haiti">Haiti</option>
+                        <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+                        <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+                        <option value="Honduras">Honduras</option>
+                        <option value="Hong Kong">Hong Kong</option>
+                        <option value="Hungary">Hungary</option>
+                        <option value="Iceland">Iceland</option>
+                        <option value="India">India</option>
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+                        <option value="Iraq">Iraq</option>
+                        <option value="Ireland">Ireland</option>
+                        <option value="Isle of Man">Isle of Man</option>
+                        <option value="Israel">Israel</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Jamaica">Jamaica</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Jersey">Jersey</option>
+                        <option value="Jordan">Jordan</option>
+                        <option value="Kazakhstan">Kazakhstan</option>
+                        <option value="Kenya">Kenya</option>
+                        <option value="Kiribati">Kiribati</option>
+                        <option value="Korea, Democratic People's Republic of">Korea, Democratic People&apos;s Republic of</option>
+                        <option value="Korea, Republic of">Korea, Republic of</option>
+                        <option value="Kuwait">Kuwait</option>
+                        <option value="Kyrgyzstan">Kyrgyzstan</option>
+                        <option value="Lao People's Democratic Republic">Lao People&apos;s Democratic Republic</option>
+                        <option value="Latvia">Latvia</option>
+                        <option value="Lebanon">Lebanon</option>
+                        <option value="Lesotho">Lesotho</option>
+                        <option value="Liberia">Liberia</option>
+                        <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                        <option value="Liechtenstein">Liechtenstein</option>
+                        <option value="Lithuania">Lithuania</option>
+                        <option value="Luxembourg">Luxembourg</option>
+                        <option value="Macao">Macao</option>
+                        <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
+                        <option value="Madagascar">Madagascar</option>
+                        <option value="Malawi">Malawi</option>
+                        <option value="Malaysia">Malaysia</option>
+                        <option value="Maldives">Maldives</option>
+                        <option value="Mali">Mali</option>
+                        <option value="Malta">Malta</option>
+                        <option value="Marshall Islands">Marshall Islands</option>
+                        <option value="Martinique">Martinique</option>
+                        <option value="Mauritania">Mauritania</option>
+                        <option value="Mauritius">Mauritius</option>
+                        <option value="Mayotte">Mayotte</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+                        <option value="Moldova, Republic of">Moldova, Republic of</option>
+                        <option value="Monaco">Monaco</option>
+                        <option value="Mongolia">Mongolia</option>
+                        <option value="Montenegro">Montenegro</option>
+                        <option value="Montserrat">Montserrat</option>
+                        <option value="Morocco">Morocco</option>
+                        <option value="Mozambique">Mozambique</option>
+                        <option value="Myanmar">Myanmar</option>
+                        <option value="Namibia">Namibia</option>
+                        <option value="Nauru">Nauru</option>
+                        <option value="Nepal">Nepal</option>
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="Netherlands Antilles">Netherlands Antilles</option>
+                        <option value="New Caledonia">New Caledonia</option>
+                        <option value="New Zealand">New Zealand</option>
+                        <option value="Nicaragua">Nicaragua</option>
+                        <option value="Niger">Niger</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Niue">Niue</option>
+                        <option value="Norfolk Island">Norfolk Island</option>
+                        <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                        <option value="Norway">Norway</option>
+                        <option value="Oman">Oman</option>
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="Palau">Palau</option>
+                        <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+                        <option value="Panama">Panama</option>
+                        <option value="Papua New Guinea">Papua New Guinea</option>
+                        <option value="Paraguay">Paraguay</option>
+                        <option value="Peru">Peru</option>
+                        <option value="Philippines">Philippines</option>
+                        <option value="Pitcairn">Pitcairn</option>
+                        <option value="Poland">Poland</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Puerto Rico">Puerto Rico</option>
+                        <option value="Qatar">Qatar</option>
+                        <option value="Reunion">Reunion</option>
+                        <option value="Romania">Romania</option>
+                        <option value="Russian Federation">Russian Federation</option>
+                        <option value="Rwanda">Rwanda</option>
+                        <option value="Saint Helena">Saint Helena</option>
+                        <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                        <option value="Saint Lucia">Saint Lucia</option>
+                        <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                        <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+                        <option value="Samoa">Samoa</option>
+                        <option value="San Marino">San Marino</option>
+                        <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                        <option value="Saudi Arabia">Saudi Arabia</option>
+                        <option value="Senegal">Senegal</option>
+                        <option value="Serbia">Serbia</option>
+                        <option value="Seychelles">Seychelles</option>
+                        <option value="Sierra Leone">Sierra Leone</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="Slovakia">Slovakia</option>
+                        <option value="Slovenia">Slovenia</option>
+                        <option value="Solomon Islands">Solomon Islands</option>
+                        <option value="Somalia">Somalia</option>
+                        <option value="South Africa">South Africa</option>
+                        <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+                        <option value="Spain">Spain</option>
+                        <option value="Sri Lanka">Sri Lanka</option>
+                        <option value="Sudan">Sudan</option>
+                        <option value="Suriname">Suriname</option>
+                        <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                        <option value="Swaziland">Swaziland</option>
+                        <option value="Sweden">Sweden</option>
+                        <option value="Switzerland">Switzerland</option>
+                        <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                        <option value="Taiwan, Province of China">Taiwan, Province of China</option>
+                        <option value="Tajikistan">Tajikistan</option>
+                        <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+                        <option value="Thailand">Thailand</option>
+                        <option value="Timor-leste">Timor-leste</option>
+                        <option value="Togo">Togo</option>
+                        <option value="Tokelau">Tokelau</option>
+                        <option value="Tonga">Tonga</option>
+                        <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                        <option value="Tunisia">Tunisia</option>
+                        <option value="Turkey">Turkey</option>
+                        <option value="Turkmenistan">Turkmenistan</option>
+                        <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                        <option value="Tuvalu">Tuvalu</option>
+                        <option value="Uganda">Uganda</option>
+                        <option value="Ukraine">Ukraine</option>
+                        <option value="United Arab Emirates">United Arab Emirates</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="United States">United States</option>
+                        <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                        <option value="Uruguay">Uruguay</option>
+                        <option value="Uzbekistan">Uzbekistan</option>
+                        <option value="Vanuatu">Vanuatu</option>
+                        <option value="Venezuela">Venezuela</option>
+                        <option value="Viet Nam">Viet Nam</option>
+                        <option value="Virgin Islands, British">Virgin Islands, British</option>
+                        <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+                        <option value="Wallis and Futuna">Wallis and Futuna</option>
+                        <option value="Western Sahara">Western Sahara</option>
+                        <option value="Yemen">Yemen</option>
+                        <option value="Zambia">Zambia</option>
+                        <option value="Zimbabwe">Zimbabwe</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="input">
+                    <label>Gender (Optional)</label>
+                    <div class="dropdown-input-container">
+                      <div class="dropdown">
+                        <label class="dropdown-label ripple" data-ripple="#ffffff">Select Gender</label>
+                        <div class="dropdown-list">
+                          <label class="dropdown-option">Male</label>
+                          <label class="dropdown-option">Female</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="btns">
+                  <button class="mainBtn">Search</button>
+                  <button class="secondBtn">Run For Today</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/niceScroll.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sly/1.6.1/sly.min.js" integrity="sha512-uR46GOwRUepFi2dzcatO3qpr4onAj46VC9ltPFIwaX8YXl5O18nVT/JnJZY7yqrrKUP0ngD/YjuatsJqCDpYyg==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script src="js/main-min.js"></script>
+  </body>
+</html>

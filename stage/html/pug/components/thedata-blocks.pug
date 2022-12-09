@@ -1,0 +1,91 @@
+.info-filters
+    .filter
+        ul.list-unstyled
+            li(data-type="all")
+                .icon
+                    i.fas.fa-border-all
+                .text All
+            li.active(data-type=".twitter")
+                .icon
+                    i.fab.fa-twitter
+                .text Twitter
+            li(data-type=".global_news")
+                .icon
+                    i.fas.fa-globe-asia
+                .text Global News
+            li(data-type=".canadian_news")
+                .icon
+                    i.far.fa-newspaper
+                .text Canadian News
+        +dropdown-icons([
+            {name: 'All', value: 'fas fa-border-all', data: 'all'}, 
+            {name: 'Twitter', value: 'fab fa-twitter', data: '.twitter'}, 
+            {name: 'Global News', value: 'fas fa-globe-asia', data:'.global_news'}, 
+            {name: 'Canadian News', value: 'far fa-newspaper', data:'.canadian_news'},
+        ])
+        .dropdown-container
+            +dropdown-icon("imgs/Vector.svg", "Order By:")
+            .icons
+                .icon.active(data-class="")
+                    img.svg(src="imgs/livestream1.svg")
+                .icon(data-class="fullwidth")
+                    img.svg(src="imgs/livestream2.svg")
+    .thedata
+        .dropdown-container
+            +dropdown-icon("imgs/Vector.svg", "Order By:")
+        .row.no-gutters
+            - for (var i = 0; i < 30; i++)
+                if (i % 3 == 0)
+                    .col.thedata-block.twitter
+                        .profile
+                            .img  
+                                img(src="imgs/profile.png")
+                            .name Jhon Deo
+                            .logo
+                                i.fab.fa-twitter
+                            .time 44 Min
+                        p.description Taking extra steps toward staying #[strong healthy] and feeling great with the new @nanocraftcbd
+                        .infs
+                            .message 
+                                i.far.fa-comment
+                                span 25
+                            .heart
+                                i.far.fa-heart
+                                span 10
+                        .fulltime 2020-05-22 20:26:46
+                else if (i % 2 == 0)
+                    .col.thedata-block.global_news
+                        .profile
+                            .img  
+                                img(src="imgs/profile.png")
+                            .name Jhon Deo
+                            .logo
+                                i.fab.fa-twitter
+                            .time 44 Min
+                        p.description Taking extra steps toward staying #[strong healthy] and feeling great with the new @nanocraftcbd
+                        .infs
+                            .message 
+                                i.far.fa-comment
+                                span 25
+                            .heart
+                                i.far.fa-heart
+                                span 10
+                        .fulltime 2020-05-22 20:26:46
+                else
+                    .col.thedata-block.canadian_news
+                        .profile
+                            .img  
+                                img(src="imgs/profile.png")
+                            .name Jhon Deo
+                            .logo
+                                i.fab.fa-twitter
+                            .time 44 Min
+                        p.description Taking extra steps toward staying #[strong healthy] and feeling great with the new @nanocraftcbd
+                        .infs
+                            .message 
+                                i.far.fa-comment
+                                span 25
+                            .heart
+                                i.far.fa-heart
+                                span 10
+                        .fulltime 2020-05-22 20:26:46

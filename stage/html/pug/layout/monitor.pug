@@ -1,0 +1,36 @@
+.monitor-container
+    .select
+        .label  Select monitor
+        +dropdown-icon("imgs/monitor1.svg", "Topic 1")
+    .blocks
+        .block
+            .label Status
+            .inf
+                .icon
+                    img.svg(src="imgs/monitor2.svg")
+                .text Working
+        .block
+            .label Total Posts
+            .inf
+                .icon
+                    img.svg(src="imgs/monitor3.svg")
+                .text 2580
+        .block
+            .label Date Range
+            .inf
+                .icon
+                    img.svg(src="imgs/monitor4.svg")
+                .text 2018/0/27 - 2020/01/27
+    .btns
+        button.primary.ripple(data-ripple="#387dfd")
+            .icon
+                img.svg(src="imgs/monitor5.svg")
+            | View Monitor
+        button.secondary.ripple(data-ripple="#387dfd")
+            .icon
+                img.svg(src="imgs/monitor6.svg")
+            | Edit Monitor
+        button.secondary.ripple(data-ripple="#387dfd")
+            .icon
+                img.svg(src="imgs/monitor7.svg")
+            | Add Filter

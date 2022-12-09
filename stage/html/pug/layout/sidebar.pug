@@ -1,0 +1,106 @@
+.sidebar-container
+    .sidebar-overlay
+        .sidebar
+            .close-btn
+            .logo
+                a.navbar-brand(href="/")
+                    .img
+                        img(src="imgs/logo.png" alt="Ki Social")
+                    .logo-text Ki Social
+            ul.list-unstyled
+                - if (current=='who')
+                    li
+                        a.active(href="#")
+                            .icon 
+                                img.svg(src="imgs/sidebar1.svg", alt="who", srcset="")
+                            .text Who
+                - else
+                    li
+                        a(href="#")
+                            .icon 
+                                img.svg(src="imgs/sidebar1.svg", alt="who", srcset="")
+                            .text Who
+                - if (current=='What')
+                    li
+                        a.active(href="#")
+                            .icon 
+                                img.svg(src="imgs/sidebar2.svg", alt="What", srcset="")
+                            .text What
+                - else
+                    li
+                        a(href="#")
+                            .icon 
+                                img.svg(src="imgs/sidebar2.svg", alt="What", srcset="")
+                            .text What
+                - if (current=='Where')
+                    li
+                        a.active(href="#")
+                            .icon 
+                                img.svg(src="imgs/sidebar3.svg", alt="Where", srcset="")
+                            .text Where
+                - else
+                    li
+                        a(href="#")
+                            .icon 
+                                img.svg(src="imgs/sidebar3.svg", alt="Where", srcset="")
+                            .text Where
+                - if (current=='How Much')
+                    li
+                        a.active(href="#")
+                            .icon 
+                                img.svg(src="imgs/sidebar4.svg", alt="How Much", srcset="")
+                            .text How Much
+                - else
+                    li
+                        a(href="#")
+                            .icon 
+                                img.svg(src="imgs/sidebar4.svg", alt="How Much", srcset="")
+                            .text How Much
+                - if (current=='Why')
+                    li
+                        a.active(href="#")
+                            .icon 
+                                img.svg(src="imgs/sidebar5.svg", alt="Why", srcset="")
+                            .text Why
+                - else
+                    li
+                        a(href="#")
+                            .icon 
+                                img.svg(src="imgs/sidebar5.svg", alt="Why", srcset="")
+                            .text Why
+                - if (current=='Report')
+                    li
+                        a.active(href="report")
+                            .icon 
+                                img.svg(src="imgs/sidebar6.svg", alt="Report", srcset="")
+                            .text Report
+                - else
+                    li
+                        a(href="report")
+                            .icon 
+                                img.svg(src="imgs/sidebar6.svg", alt="Report", srcset="")
+                            .text Report
+                - if (current=='Search')
+                    li
+                        a.active(href="search")
+                            .icon 
+                                img.svg(src="imgs/sidebar7.svg", alt="Search", srcset="")
+                            .text Search
+                - else
+                    li
+                        a(href="search")
+                            .icon 
+                                img.svg(src="imgs/sidebar7.svg", alt="Search", srcset="")
+                            .text Search
+                - if (current=='Add')
+                    li
+                        a.active(href="dashboard")
+                            .icon 
+                                img.svg(src="imgs/sidebar8.svg", alt="Add", srcset="")
+                            .text Add
+                - else
+                    li
+                        a(href="dashboard")
+                            .icon 
+                                img.svg(src="imgs/sidebar8.svg", alt="Add", srcset="")
+                            .text Add

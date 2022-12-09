@@ -1,0 +1,116 @@
+$colors: (
+  primary_colors: (
+    first: #1da1f2,
+    second: #387dfd,
+    third: #1b5edb,
+    four: #aebbd0,
+    five: #434860,
+  ),
+  title: (
+    first: #343434,
+    second: #424242,
+    third: #646464,
+    four: #a7a7a7,
+  ),
+  lines: (
+    first: #c8c8c8,
+    second: #d2d2d2,
+    third: #e0e0e0,
+    four: #ececec,
+    five: #f5f5f5,
+  ),
+  theme_colors: (
+    red: #ff5a4e,
+    green: #00ffdb,
+    violet: #666ee8,
+    camel: #f2994a,
+  ),
+);
+
+@function color($color, $tone: "base") {
+  @return map-get(map-get($colors, $color), $tone);
+}
+
+$scrollBar: #d2d2d2;
+$scrollBarBackground: #fafafa;
+$scrollBarBorder: #ececec;
+$dadada: #dadada;
+$logoColor: #4f4f4f;
+$searchColor: #444444;
+$headingDarkColor: #cedafa;
+$backgroundColor: #f3f5fa;
+$canvasDarkColor: #272a3d;
+$backgroundColorDark: #151726;
+$colorBlockDark: color(primary_colors, five);
+$colorBlock: #aebbd0;
+$white: #fff;
+$grey: #818181;
+$black: #000;
+$cssProgressLabel: #f1f4fb;
+$cssProgressLabelDark: #303245;
+$iconFullScreen: color(primary_colors, four);
+$iconFullScreenDark: #4c5f8f;
+$tagBlockBorder: #d4dbed;
+$tagBlockIcons: #7383ab;
+$checkboxCircle: #dfe5f4;
+$magicSearchced4da: #ced4da;
+$dropdownHover: #36384f;
+$checkboxBorder: #d6d6d6;
+$thumblr: #35465c;
+$boxShadow: 0px 0px 15px rgba(221, 225, 250, 0.5),
+  0px 0px 4px rgba(221, 225, 250, 0.25);
+$boxShadowDark: 0px 0px 15px rgba(11, 14, 38, 0.5),
+  0px 0px 4px rgba(11, 14, 38, 0.25);
+$black: #000;
+$tagBlockColor: #fbfcff;
+$notificationBorder: #202440;
+:root {
+  color-scheme: dark light;
+  --white-black: #{$black};
+  --color-page-background: #{$backgroundColor};
+  --color-block-background: #{$white};
+  --color-block: #{$colorBlock};
+  --color-sidebar: #{$grey};
+  --color-canvas: #{$white};
+  --border-canvas: #{$backgroundColor};
+  --heading-color: #{color(title, second)};
+  --title-canvas: #{$black};
+  --cssProgress-label: #{$cssProgressLabel};
+  --filter-border: #{color(lines, four)};
+  --icon-fullScreen: #{$iconFullScreen};
+  --main-BoxShadow: #{$boxShadow};
+  --info-title: #{color(title, third)};
+  --tagBlock-border: #{$tagBlockBorder};
+  --tagBlock-title: #{color(title, first)};
+  --scrollBar-color: #{$scrollBar};
+  --scrollBar-Background: #{$scrollBarBackground};
+  --scrollBar-Border: #{$scrollBarBorder};
+  --tag-color: $white;
+  --tagBlock-color: #{$white};
+  --tagBlock-searchColor: #{$colorBlock};
+  --tagBlock-time: #{color(title, four)};
+  --tagBlock-icons: #{color(title, four)};
+  --search-border: #{$dadada};
+  --search-color: #{$searchColor};
+  --settings-color: #{$colorBlock};
+  --logo-color: #{$logoColor};
+  --checkbox-label: #{$grey};
+  --checkbox-border: #{$checkboxCircle};
+  --checkbox-background: #{$white};
+  --checkbox-circleBackground: #{color(primary_colors, second)};
+  --magicSearch-btn: #{color(primary_colors, second)};
+  --magicSearch-icon: #{$backgroundColor};
+  --magicSearch-bar: #{$magicSearchced4da};
+  --dropdown-option: #{$cssProgressLabel};
+  --dropdown-icon: #{color(lines, second)};
+  --input-placeholder: #{color(title, four)};
+  --social-thumblr: #{$thumblr};
+  --social-news: #{color(primary_colors, five)};
+  --role-border: #{$backgroundColor};
+  --role-line: #{$headingDarkColor};
+  --scroll-background-mobile: #{$white};
+  --scroll-background: #{$cssProgressLabel};
+  --tagBlock-fullwidthEven: #{$tagBlockColor};
+  --notification-border: #{$white};
+  --arrow-dropdown: rgba(215, 227, 243, 0.5);
+}

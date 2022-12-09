@@ -1,0 +1,119 @@
+nav.header.navbar.navbar-expand-lg.navbar-light
+    .toggler
+        img(src="imgs/navToggle.svg", alt="")
+    .logo
+        a.navbar-brand(href="/")
+            .img
+                img(src="imgs/logo.png" alt="Ki Social")
+            .logo-text Ki Social
+    ul.list-unstyled.navbar-nav
+        li.monitor.nav-item
+            a.nav-link(href="#")
+                .icon
+                    img.svg(src="imgs/header1.svg")
+                .text Monitor
+        - if (current=='livestream')
+            li.nav-item
+                a.active(href="livestream")
+                    .icon
+                        img.svg(src="imgs/header2.svg")
+                    .text Live Stream
+        - else
+            li.nav-item
+                a(href="livestream")
+                    .icon
+                        img.svg(src="imgs/header2.svg")
+                    .text Live Stream
+        li.nav-item
+            a.nav-link(href="#")
+                .icon
+                    img.svg(src="imgs/header3.svg")
+                .text Explore
+        li.nav-item
+            a.nav-link(href="#")
+                .icon
+                    img.svg(src="imgs/header4.svg")
+                .text Global View
+        li.nav-item
+            a.nav-link(href="#")
+                .icon
+                    img.svg(src="imgs/header5.svg")
+                .text Alerts
+        li.nav-item
+            a.nav-link(href="#")
+                .icon
+                    img.svg(src="imgs/header6.svg")
+                .text Dashborads
+    +search
+    .checkboxToggle
+        input.customCheckbox(type="checkbox" id="checkboxToggle")
+        span.labelclick Dark Mode
+        label(for="checkboxToggle")
+    .settings-container 
+        .notifications
+            span.icon
+                i.far.fa-bell
+            span.numbers 2
+            .notifications-container
+                .notification.scrollbar
+                    a(href="#")
+                        .icon
+                            i.far.fa-envelope
+                        .notification-text
+                            h5 Commented on your post
+                            span 3 hours ago
+                    a(href="#")
+                        .icon
+                            i.far.fa-envelope
+                        .notification-text
+                            h5 Commented on your post
+                            span 3 hours ago
+                    a(href="#")
+                        .icon
+                            i.far.fa-envelope
+                        .notification-text
+                            h5 Commented on your post
+                            span 3 hours ago
+                    a(href="#")
+                        .icon
+                            i.far.fa-envelope
+                        .notification-text
+                            h5 Commented on your post
+                            span 3 hours ago
+                    a(href="#")
+                        .icon
+                            i.far.fa-envelope
+                        .notification-text
+                            h5 Commented on your post
+                            span 3 hours ago
+                    a(href="#")
+                        .icon
+                            i.far.fa-envelope
+                        .notification-text
+                            h5 Commented on your post
+                            span 3 hours ago
+                    a(href="#")
+                        .icon
+                            i.far.fa-envelope
+                        .notification-text
+                            h5 Commented on your post
+                            span 3 hours ago
+                .divider
+                a(href="#").notification-btn View all Notification
+        .profile
+            img(src="imgs/man.png", alt="", srcset="")
+            .profile-container
+                a(href="#")
+                    .icon
+                        i.far.fa-user
+                    h5 Profile
+                a(href="#")
+                    .icon
+                        i.far.fa-envelope
+                    h5 Inbox
+                a(href="#")
+                    .icon
+                        i.fas.fa-sign-out-alt
+                    h5 Logout
+        .settings
+            i.fas.fa-chevron-down

@@ -1,0 +1,26 @@
+.magic-search
+    .btns.no-scrollbar
+        button.active(data-search=".magic-container")
+            .icon
+                img.svg(src="imgs/magic1.svg")
+            | Magic
+        button(data-search=".simple-container")
+            .icon
+                img.svg(src="imgs/magic2.svg")
+            | Simple
+        button(data-search=".advanced-container")
+            .icon
+                img.svg(src="imgs/magic3.svg")
+            | Advanced
+        button
+            .icon
+                img.svg(src="imgs/magic4.svg")
+            | News
+    .search-tags.input-group
+        .icon.input-group-prepend
+            .input-group-text
+                img.svg(src="imgs/magic5.svg")
+        input.tagged(type="text" data-removeBtn="true" name="tag-2" value="healthy, healthy snacks, healthy recipes" )
+        .icon.input-group-append
+            span.input-group-text
+                i.fas.fa-search

@@ -1,0 +1,129 @@
+body.dark-theme {
+  --white-black: #{$white};
+  --color-page-background: #{$backgroundColorDark};
+  --color-block-background: #{$backgroundColorDark};
+  --color-block: #{$colorBlockDark};
+  --color-sidebar: #{$colorBlockDark};
+  --color-canvas: #{$canvasDarkColor};
+  --border-canvas: #{$backgroundColorDark};
+  --heading-color: #{$headingDarkColor};
+  --title-canvas: #{$headingDarkColor};
+  --info-title: #{$headingDarkColor};
+  --cssProgress-label: #{$cssProgressLabelDark};
+  --filter-border: #{$colorBlockDark};
+  --icon-fullScreen: #{$iconFullScreenDark};
+  --main-BoxShadow: #{$boxShadowDark};
+  --tagBlock-border: #{color(primary_colors, five)};
+  --tagBlock-title: #{$headingDarkColor};
+  --scrollBar-color: #{$cssProgressLabelDark};
+  --scrollBar-Background: #{color(primary_colors, five)};
+  --scrollBar-Border: #{color(primary_colors, five)};
+  --tag-color: #{color(primary_colors, five)};
+  --tagBlock-color: #{$cssProgressLabelDark};
+  --tagBlock-time: #{$headingDarkColor};
+  --tagBlock-icons: #{$tagBlockIcons};
+  --magicSearch-btn: #{$tagBlockIcons};
+  --search-border: #{color(primary_colors, five)};
+  --search-color: #{$headingDarkColor};
+  --settings-color: #{$headingDarkColor};
+  --logo-color: #{$white};
+  --checkbox-label: #{$headingDarkColor};
+  --checkbox-border: #{$canvasDarkColor};
+  --checkbox-background: #{color(primary_colors, second)};
+  --checkbox-circleBackground: #{$cssProgressLabelDark};
+  --magicSearch-icon: #{color(primary_colors, five)};
+  --magicSearch-bar: #{color(primary_colors, five)};
+  --tagBlock-searchColor: #{color(primary_colors, five)};
+  --dropdown-option: #{$dropdownHover};
+  --dropdown-icon: #{color(primary_colors, five)};
+  --checkbox-border: #{color(primary_colors, five)};
+  --input-placeholder: #{color(primary_colors, five)};
+  --social-thumblr: #{$white};
+  --social-news: #{$headingDarkColor};
+  --role-border: #{$cssProgressLabelDark};
+  --role-line: #{color(primary_colors, five)};
+  --scroll-background: #{color(primary_colors, five)};
+  --scroll-background-mobile: #{color(primary_colors, five)};
+  --tagBlock-fullwidthEven: #{$cssProgressLabelDark};
+  --notification-border: $notificationBorder;
+  --arrow-dropdown: #272c4c;
+  .divider {
+    border-top: 1px solid #202440;
+  }
+  .header {
+    box-shadow: 0px 4px 6px rgba(11, 14, 38, 0.6);
+  }
+  .sidebar {
+    box-shadow: 2px 0px 5px rgba(11, 14, 38, 0.6);
+  }
+  .livestream-page {
+    .content-area {
+      .canvas {
+        .canvas-block {
+          box-shadow: 0px 0px 15px rgba(11, 14, 38, 0.1),
+            0px 0px 4px rgba(11, 14, 38, 0.25);
+          border: none !important;
+        }
+      }
+    }
+  }
+  .content-area {
+    .tags {
+      .tags-block {
+        .thetags {
+          .tag {
+            box-shadow: 0px 0px 2px rgba(113, 129, 228, 0.25),
+              0px 0px 10px rgba(113, 129, 228, 0.05);
+          }
+        }
+      }
+    }
+    .magic-search-page .magic-search .btns button {
+      box-shadow: 0px 0px 2px rgba(11, 14, 38, 0.25),
+        0px 0px 10px rgba(11, 14, 38, 0.05);
+    }
+    .info-filters {
+      .thedata {
+        .thedata-block {
+          box-shadow: 0px 0px 15px rgba(11, 14, 38, 0.1),
+            0px 0px 4px rgba(11, 14, 38, 0.25);
+          border: none;
+        }
+      }
+    }
+  }
+  .dashboard-builder-page .builder .charts .block,
+  .dashboard-builder-page .view .drop .block {
+    box-shadow: 0px 0px 15px rgba(11, 14, 38, 0.1),
+      0px 0px 4px rgba(11, 14, 38, 0.25);
+    &.volume {
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+  .dashboard-builder-page .view .drop {
+    box-shadow: 0px 0px 15px rgba(11, 14, 38, 0.1),
+      0px 0px 4px rgba(11, 14, 38, 0.25);
+  }
+  .magic-search-page .advanced-container .role-group .role {
+    box-shadow: 0px 0px 15px rgba(11, 14, 38, 0.1),
+      0px 0px 4px rgba(11, 14, 38, 0.25);
+  }
+  .report-page .canvas .canvas-block,
+  .report-page .builder .dashboards .checkbox-container {
+    box-shadow: 0px 0px 15px rgba(11, 14, 38, 0.1),
+      0px 0px 4px rgba(11, 14, 38, 0.25);
+  }
+  .content-area .canvas .canvas-block .svg-container span {
+    color: $headingDarkColor;
+  }
+  .header .navbar-mobile {
+    box-shadow: 0px -4px 5px rgba(11, 14, 38, 0.35);
+  }
+  .monitor-container {
+    box-shadow: 0px 4px 5px rgba(11, 14, 38, 0.2);
+  }
+}

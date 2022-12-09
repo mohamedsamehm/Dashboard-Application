@@ -1,0 +1,181 @@
+.sidebar-container {
+  .sidebar-overlay {
+    @media (max-width: 1399.98px) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: none;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      transition: opacity 0.3s;
+      z-index: 999999999999999;
+    }
+  }
+  .sidebar {
+    margin-top: 96px;
+    transition: width 0.3s ease-in-out;
+    will-change: width;
+    position: fixed;
+    height: 100%;
+    z-index: 99;
+    overflow: hidden;
+    background: var(--color-block-background);
+    box-shadow: 2px 0px 5px rgba(221, 225, 250, 0.2);
+    .close-btn {
+      position: relative;
+      width: 25px;
+      cursor: pointer;
+      height: 25px;
+      opacity: 0.3;
+      margin-top: 40px;
+      margin-right: 25px;
+      margin-left: auto;
+      &:hover {
+        opacity: 1;
+      }
+      &:before,
+      &:after {
+        position: absolute;
+        left: 15px;
+        content: " ";
+        height: 26px;
+        width: 2px;
+        background-color: var(--info-title);
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+      @media (min-width: 1400px) {
+        display: none;
+      }
+    }
+    .logo {
+      display: none;
+      @media (max-width: 1400px) {
+        margin-top: 5px;
+        margin-left: 47px;
+        margin-bottom: 16px;
+        display: block;
+      }
+      @media (max-width: 700px) {
+        a {
+          .img {
+            margin-right: 10px !important;
+          }
+          .logo-text {
+            max-width: 91px !important;
+          }
+        }
+      }
+      a {
+        text-decoration: none;
+        display: flex;
+        cursor: pointer;
+        width: 100%;
+        padding: 0;
+        margin: 0 !important;
+        .img {
+          width: 100%;
+          margin-right: 18px;
+          flex: 0 0 41px;
+          max-width: 41px;
+        }
+        .logo-text {
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 33px;
+          width: 100%;
+          color: var(--logo-color);
+        }
+      }
+    }
+    @media (min-width: 1600px) {
+      width: 119px;
+      &:hover {
+        width: 356px;
+        .text {
+          visibility: visible !important;
+        }
+      }
+    }
+    @media (min-width: 1400px) and (max-width: 1600px) {
+      width: 100px;
+      &:hover {
+        width: 325px !important;
+        .text {
+          visibility: visible !important;
+        }
+      }
+      ul {
+        li {
+          a {
+            width: 325px !important;
+            .icon {
+              padding: 0 42px !important;
+              width: 100px !important;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 1399.98px) {
+      transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        -webkit-transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transform: translateX(-100px);
+      width: 356px;
+      margin: 0;
+      .text {
+        visibility: visible !important;
+      }
+    }
+    ul {
+      height: 100%;
+      li a {
+        text-decoration: none;
+        display: flex;
+        padding: 17px 0px 16px 0;
+        width: 356px;
+        transition: all 0.3s ease-in-out;
+        &:hover,
+        &.active {
+          .icon {
+            svg {
+              path {
+                fill: color(theme_colors, red);
+              }
+            }
+          }
+          .text {
+            color: color(theme_colors, red);
+          }
+        }
+        .icon {
+          padding: 0 49px;
+          cursor: pointer;
+          width: 117px;
+          svg {
+            path {
+              fill: var(--color-block);
+            }
+          }
+        }
+        .text {
+          font-size: 18px;
+          line-height: 27px;
+          align-items: center;
+          color: var(--color-sidebar);
+          display: flex;
+          visibility: hidden;
+          transition: visibility 0.2s ease-in-out;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

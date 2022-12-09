@@ -1,0 +1,95 @@
+- var pageTitle = 'Dashboard Builder';
+- var current='Add';
+include pug/components/buttons
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    meta(name="color-scheme" content="dark light")
+    title #{pageTitle}
+    include pug/layout/styles
+  body
+    .page.dashboard-builder-page
+      include pug/layout/header
+      include pug/layout/sidebar
+      include pug/layout/monitor
+      .content-area
+        .content-area-container.row.no-gutters
+          .builder.col
+            h1 Dashboard Builder
+            .inputs 
+              .select.input
+                label Select monitor
+                +dropdown-icon("imgs/monitor1.svg", "Topic 1")
+              .input
+                label Report Name
+                .dropdown-input-container
+                  input(type="text" placeholder="Report Name")
+              +data-picker(1, 2)
+            .inputs.inputs-50.row.no-gutters
+              .select.input.col.mr-3#columns
+                label Number of Column
+                +dropdown-default('2', [
+                  {value: '1'},
+                  {value: '2'},
+                ])
+              .select.input.col#width
+                label Width
+                .dropdown-input-container
+                  +dropdown-default('50% / 50%', [
+                    {value: '75% / 25%'},
+                    {value: '50% / 50%'},
+                    {value: '25% / 75%'},
+                  ])
+            .charts
+              h2 Click And Drag Your Chart
+              .blocks.row.no-gutters
+                .block.col.drag(data-name="age")
+                  .icon 
+                    img.svg(src="imgs/age.svg", alt="")
+                  h3 Age
+                .block.col.drag(data-name="emo")
+                  .icon 
+                    img.svg(src="imgs/emotions.svg", alt="")
+                  h3 Emotions
+                .block.col.drag(data-name="sentiments")
+                  .icon 
+                    img.svg(src="imgs/sentiments.svg", alt="")
+                  h3 Sentiments
+                .block.col.drag(data-name="content-source")
+                  .icon 
+                    img.svg(src="imgs/content_source.svg", alt="")
+                  h3 Content Source
+                .block.col.drag(data-name="content-sites")
+                  .icon 
+                    img.svg(src="imgs/content_sites.svg", alt="")
+                  h3 Content Sites
+                .block.col.drag(data-name="gender")
+                  .icon 
+                    img.svg(src="imgs/gender.svg", alt="")
+                  h3 Gender
+                .block.col.drag.volume(data-name="volume")
+                  .icon 
+                    img.svg(src="imgs/volume.svg", alt="")
+                  h3 Volume
+                .block.col.drag(data-name="words")
+                  .icon 
+                    img.svg(src="imgs/words.svg", alt="")
+                  h3 Words
+            .checkboxToggle
+              input.customCheckbox(type="checkbox" id="shared_link")
+              label(for="shared_link")
+              span.labelclick Create Shared Link
+            .btns
+              button.mainBtn#generate Generate
+              button.secondBtn Save Building
+          .view.col
+            h4 Sorry, Drag and Drop not Supported in your device
+            .row.no-gutters.dropBlocks
+              .drop.col
+                span Drag and Drop Here 
+              .drop.col
+                span Drag and Drop Here 
+    include pug/layout/scripts
